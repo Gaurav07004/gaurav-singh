@@ -1,15 +1,58 @@
 @import "tailwindcss";
+
 :root {
-  --primary: #f16d34;
-  --primary-light: #f5976b;
+  --primary: #4ea8ff;
+  --primary-light: #7cc2ff;
 
-  --secondary: #2c3338;
-  --secondary-light: #6b7278;
+  --secondary: #e6ebf3;
+  --secondary-light: #9aa6bc;
 
-  --bg-light: #f5f3f1;
-  --bg-dark: #2c2a28;
+  --bg-dark: #0a0f14;
+  --bg-darker: #05070a;
 
-  --border-button: rgba(0, 0, 0, 0.25);
+  --card: #111418;
+  --chip: #151a20;
+  --badge: #0f1318;
+
+  --border: #1f242c;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(78, 168, 255, 0.25),
+    rgba(78, 168, 255, 0.08)
+  );
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(124, 194, 255, 0.6),
+    rgba(78, 168, 255, 0.35)
+  );
+}
+
+.slow-spin {
+  animation: slowSpin 4s linear infinite;
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes textReveal {
@@ -39,5 +82,77 @@
 @keyframes slideDown {
   100% {
     transform: translateY(100%);
+  }
+}
+
+.hero-arrow path {
+  stroke: rgb(124, 194, 255);
+  stroke-width: 0.1;
+  fill: none;
+}
+
+.arrow-left {
+  animation: arrowCycleLeft 6s ease-in-out infinite;
+}
+
+.arrow-right {
+  animation: arrowCycleRight 6s ease-in-out infinite;
+}
+
+@keyframes arrowCycleLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-140px);
+    fill: transparent;
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  40% {
+    fill: rgba(124, 194, 255, 0.078);
+    stroke-width: 0.3;
+    transform: translateY(0);
+  }
+
+  45% {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+
+  100% {
+    fill: rgba(124, 194, 255, 0.078);
+    transform: translateY(300px);
+  }
+}
+
+@keyframes arrowCycleRight {
+  0% {
+    opacity: 0;
+    transform: translateX(140px);
+    fill: transparent;
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  40% {
+    fill: rgba(124, 194, 255, 0.078);
+    stroke-width: 0.3;
+    transform: translateY(0);
+  }
+
+  45% {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+
+  100% {
+    fill: rgba(124, 194, 255, 0.078);
+    transform: translateY(300px);
   }
 }
