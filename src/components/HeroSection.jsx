@@ -9,6 +9,7 @@ const stats = [
 export default function DashboardContent() {
   return (
     <main
+      id="Home"
       className="
         font-[Quicksand]
         max-w-337.5 mx-auto
@@ -50,14 +51,17 @@ export default function DashboardContent() {
 
         <button
           className="
-            mt-8 px-7 py-4 rounded text-sm uppercase
+            inline-block
+            mt-6 px-5 py-3
+            rounded
+            text-sm uppercase tracking-wide
             border border-(--primary)
             text-(--primary)
+            transition-all duration-300
+            hover:shadow-[0_12px_28px_rgba(0,0,0,0.25)]
             hover:bg-(--primary-light)
-            hover:border-(--primary-light)
             hover:text-black
-            transition
-            tracking-wide
+            hover:border-(--primary-light)
           "
         >
           Get In Touch

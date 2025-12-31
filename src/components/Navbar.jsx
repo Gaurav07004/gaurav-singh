@@ -24,10 +24,18 @@ export default function Navbar() {
   ];
 
   const navLinks = [
-    { label: "Home", href: "#hero", color: "bg-cyan-400" },
-    { label: "About Me", href: "#about", color: "bg-blue-400" },
-    { label: "Experience", href: "#experience", color: "bg-emerald-400" },
-    { label: "Projects", href: "#projects", color: "bg-indigo-400" },
+    { id: "Home", label: "Home", color: "bg-cyan-400" },
+    { id: "About-Me", label: "About Me", color: "bg-blue-400" },
+    {
+      id: "Work-Experience",
+      label: "Experience",
+      color: "bg-emerald-400",
+    },
+    {
+      id: "Projects",
+      label: "Projects",
+      color: "bg-indigo-400",
+    },
   ];
 
   return (
@@ -39,13 +47,17 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="
+              inline-block
+              px-5 py-3
+              rounded
+              text-sm uppercase tracking-wide
               border border-(--primary)
               text-(--primary)
-              uppercase px-5 py-3 rounded text-sm
+              transition-all duration-300
+              hover:shadow-[0_12px_28px_rgba(0,0,0,0.25)]
               hover:bg-(--primary-light)
-              hover:border-(--primary-light)
               hover:text-black
-              transition
+              hover:border-(--primary-light)
             "
           >
             View Resume
@@ -90,7 +102,7 @@ export default function Navbar() {
         <button
           onClick={closeMenu}
           aria-label="Close menu"
-          className="absolute right-10 top-8 text-(--secondary) text-3xl"
+          className="absolute right-10 top-8 text-(--secondary) text-3xl cursor-pointer"
         >
           <RxCross1 />
         </button>
@@ -106,7 +118,7 @@ export default function Navbar() {
                 {navLinks.map((link) => (
                   <li key={link.label}>
                     <a
-                      href={link.href}
+                      href={`#${link.id}`}
                       onClick={closeMenu}
                       className="flex items-center gap-3 group transition"
                     >

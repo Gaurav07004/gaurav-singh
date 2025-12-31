@@ -6,7 +6,7 @@ export default function ContactSection() {
       className="
         font-[Quicksand]
         max-w-337.5 mx-auto
-        px-12 py-15
+        px-12 pt-30 pb-10
       "
     >
       <h2 className="flex items-center gap-4">
@@ -26,16 +26,17 @@ export default function ContactSection() {
       <a
         href="mailto:singhgaurav07004@gmail.com"
         className="
-          inline-block
-          mt-6 px-8 py-4
-          rounded
-          text-sm uppercase tracking-wide
-          border border-(--primary)
-          text-(--primary)
-          hover:bg-(--primary-light)
-          hover:text-black
-          hover:border-(--primary-light)
-          transition
+            inline-block
+            mt-6 px-5 py-3
+            rounded
+            text-sm uppercase tracking-wide
+            border border-(--primary)
+            text-(--primary)
+            transition-all duration-300
+            hover:shadow-[0_12px_28px_rgba(0,0,0,0.25)]
+            hover:bg-(--primary-light)
+            hover:text-black
+            hover:border-(--primary-light)
         "
       >
         Drop a Mail!

@@ -112,11 +112,11 @@ export default function AboutSection() {
 
   return (
     <section
-      id="about"
+      id="About-Me"
       className="
         font-[Quicksand]
         max-w-337.5 mx-auto
-        px-12 pt-30 pb-15
+        px-12 pt-30 pb-10
       "
     >
       <h2 className="flex items-center gap-4">
