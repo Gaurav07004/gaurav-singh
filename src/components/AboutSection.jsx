@@ -57,8 +57,8 @@ export default function AboutSection() {
     {
       category: "Programming Languages",
       items: [
-        { name: "JavaScript", icon: Javascript },
         { name: "C++", icon: CPP },
+        { name: "JavaScript", icon: Javascript },
       ],
     },
 
@@ -182,15 +182,15 @@ export default function AboutSection() {
                 <div
                   key={`${group.category}-${skill.name}`}
                   className="
-              flex items-center gap-2
-              px-3 py-2
-              rounded-md
-              bg-[#1d1f23]
-              border border-[#2a2d31]
-              hover:border-(--primary)
-              hover:bg-[#22262b]
-              transition
-            "
+                    flex items-center gap-2
+                    px-3 py-2
+                    rounded-md
+                    bg-[#1d1f23]
+                    border border-[#2a2d31]
+                    hover:border-(--primary)
+                    hover:bg-[#22262b]
+                    transition
+                    "
                 >
                   <img
                     src={skill.icon}

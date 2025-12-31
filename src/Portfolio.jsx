@@ -3,10 +3,9 @@ import PreLoader from "./components/PreLoader";
 
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
-// import TechStackSection from "./components/TechStackSection";
-// import ExperienceSection from "./components/ExperienceSection";
-// import ProjectsSection from "./components/ProjectsSection";
-// import ContactSection from "./components/ContactSection";
+import ExperienceSection from "./components/ExperienceSection";
+import ProjectsSection from "./components/ProjectsSection";
+import ContactSection from "./components/ContactSection";
 
 export default function Portfolio() {
   return (
@@ -15,12 +14,9 @@ export default function Portfolio() {
       <PreLoader />
       <HeroSection />
       <AboutSection />
-      {/* <TechStackSection /> */}
-
-      {/* 
       <ExperienceSection />
       <ProjectsSection />
-      <ContactSection /> */}
+      <ContactSection />
     </main>
   );
 }
