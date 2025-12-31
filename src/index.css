@@ -1,0 +1,43 @@
+@import "tailwindcss";
+:root {
+  --primary: #f16d34;
+  --primary-light: #f5976b;
+
+  --secondary: #2c3338;
+  --secondary-light: #6b7278;
+
+  --bg-light: #f5f3f1;
+  --bg-dark: #2c2a28;
+
+  --border-button: rgba(0, 0, 0, 0.25);
+}
+
+@keyframes textReveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textHold {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textFadeOut {
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes slideDown {
+  100% {
+    transform: translateY(100%);
+  }
+}
