@@ -1,12 +1,7 @@
 import ArrowAnimation from "./ArrowAnimation";
 import { NavLink } from "react-router-dom";
+import { stats, about } from "../data/Content/Content";
 import resume from "../data/Resume/Gaurav-Singh.pdf";
-
-const stats = [
-  { value: "2", label: "Years of Development Experience" },
-  { value: "5", label: "Completed Projects" },
-  { value: "400", label: "Hours of Practical Learning" },
-];
 
 export default function DashboardContent() {
   return (
@@ -29,109 +24,107 @@ export default function DashboardContent() {
         xl:flex-row xl:items-start xl:gap-14
       "
     >
-      <section
-        className="
-          max-w-3xl
-          text-center md:text-left
-
-          xl:max-w-337.5
-        "
-      >
-        <h1
+      {about.map((profile) => (
+        <section
           className="
-            text-[40px] font-extrabold uppercase leading-[1.1]
-            text-(--secondary)
-
-            sm:text-[50px]
-            md:text-[58px]
-            lg:text-[64px]
-            xl:text-[68px]
-          "
-        >
-          I'm <br />
-          <span className="text-(--secondary)">Gaurav Singh,</span>
-        </h1>
-
-        <h2
-          className="
-            mt-3
-            text-2xl font-semibold text-(--primary)
-            sm:text-[26px]
-            md:text-2xl
-            xl:text-[28px]
-          "
-        >
-          A Full Stack Engineer
-        </h2>
-
-        <p
-          className="
-            mt-5
-            text-[15px]
-            text-(--secondary-light)
-            leading-relaxed
-            text-justify
             max-w-3xl
+            text-center md:text-left
 
-            sm:text-base
-            md:text-lg 
-
-            xl:max-w-full
-            xl:leading-[1.85]
+            xl:max-w-337.5
           "
         >
-          I build scalable, user-focused web applications with clean interfaces,
-          reliable backends, and strong performance. I enjoy working across the
-          stack from intuitive UI design to secure APIs and database systems,
-          focusing on clean architecture, maintainable code, and real-world
-          impact.
-        </p>
-
-        <section className="md:inline-block flex justify-center items-center gap-4 mt-2 xl:mt-6">
-          <NavLink
-            to="mailto:singhguarav07004@gmail.com"
+          <h1
             className="
-              mt-6
-              inline-block
-              px-6 py-3
-              rounded
-              text-[0.8rem] uppercase tracking-wide
-              border border-(--primary)
-              text-(--primary)
-              transition-all duration-500
-              hover:font-bold
-              hover:bg-(--primary-light)
-              hover:text-black
-              hover:border-(--primary-light)
+              text-[40px] font-extrabold uppercase leading-[1.1]
+              text-(--secondary)
+
+              sm:text-[50px]
+              md:text-[58px]
+              lg:text-[64px]
+              xl:text-[68px]
             "
           >
-            Get In Touch
-          </NavLink>
+            I'm <br />
+            <span className="text-(--secondary)">{profile.name},</span>
+          </h1>
 
-          <NavLink
-            to={resume}
-            target="_blank"
-            rel="noopener noreferrer"
+          <h2
             className="
-              md:hidden lg:hidden
-              inline-block
-              mt-6
-              px-6 py-3
-              rounded
-              text-[0.8rem] uppercase tracking-wide
-              border border-(--primary)
-              text-(--primary)
-              transition-all duration-500
-              hover:font-bold
-              hover:bg-(--primary-light)
-              hover:text-black
-              hover:border-(--primary-light)
+              mt-3
+              text-2xl font-semibold text-(--primary)
+              sm:text-[26px]
+              md:text-2xl
+              xl:text-[28px]
             "
           >
-            View Resume
-          </NavLink>
+            {profile.designation}
+          </h2>
+
+          <p
+            className="
+              mt-5
+              text-[15px]
+              text-(--secondary-light)
+              leading-relaxed
+              text-justify
+              max-w-3xl
+
+              sm:text-base
+              md:text-lg 
+
+              xl:max-w-full
+              xl:leading-[1.85]
+            "
+          >
+            {profile.about}
+          </p>
+
+          <section className="md:inline-block flex justify-center items-center gap-4 mt-2 xl:mt-6">
+            <NavLink
+              to="mailto:singhguarav07004@gmail.com"
+              className="
+                mt-6
+                inline-block
+                px-6 py-3
+                rounded
+                text-[0.8rem] uppercase tracking-wide
+                border border-(--primary)
+                text-(--primary)
+                transition-all duration-500
+                hover:font-bold
+                hover:bg-(--primary-light)
+                hover:text-black
+                hover:border-(--primary-light)
+              "
+            >
+              Get In Touch
+            </NavLink>
+
+            <NavLink
+              to={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                md:hidden lg:hidden
+                inline-block
+                mt-6
+                px-6 py-3
+                rounded
+                text-[0.8rem] uppercase tracking-wide
+                border border-(--primary)
+                text-(--primary)
+                transition-all duration-500
+                hover:font-bold
+                hover:bg-(--primary-light)
+                hover:text-black
+                hover:border-(--primary-light)
+              "
+            >
+              View Resume
+            </NavLink>
+          </section>
         </section>
-      </section>
+      ))}
 
       <section
         className="

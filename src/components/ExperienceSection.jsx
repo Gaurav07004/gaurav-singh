@@ -1,28 +1,5 @@
 import { IoFlowerOutline } from "react-icons/io5";
-
-export const experience = [
-  {
-    role: "Frontend Engineer Intern",
-    company: "Webxces Technologies",
-    location: "Mumbai",
-    locationType: "Onsite",
-    duration: "June 2025 - September 2025",
-
-    summary:
-      "Worked as a Frontend Engineer Intern at Webxces Technologies, where I built responsive and performance-optimized web interfaces using React.js. I developed reusable component-based UI with React Hooks, implemented state management using Redux, and integrated RESTful APIs in collaboration with backend engineers. I also worked on interactive dashboards using Chart.js, optimized application performance through lazy loading and efficient rendering, and participated in agile processes such as sprint planning, daily standups, and code reviews while collaborating closely with designers and developers to deliver clean, maintainable features.",
-
-    tech: [
-      "ReactJs",
-      "React Hooks",
-      "Redux",
-      "JavaScript",
-      "ChartJs",
-      "REST APIs",
-      "Git",
-      "GitHub",
-    ],
-  },
-];
+import { experience } from "../data/Content/Content";
 
 export default function WorkExperience() {
   return (
