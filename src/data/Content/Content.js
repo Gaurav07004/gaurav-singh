@@ -2,7 +2,7 @@ import Cpp from "../../assets/cpp.svg";
 import Javascript from "../../assets/Javascript.svg";
 import Html5 from "../../assets/html5.svg";
 import Css3 from "../../assets/css3.svg";
-import ReactIcon from "../../assets/React.svg";
+import React from "../../assets/react.svg";
 import ReactHooks from "../../assets/ReactHooks.svg";
 import Redux from "../../assets/Redux.svg";
 import NextJs from "../../assets/NextJs.svg";
@@ -73,7 +73,7 @@ export const skills = [
     items: [
       { name: "HTML5", icon: Html5 },
       { name: "CSS3", icon: Css3 },
-      { name: "ReactJs", icon: ReactIcon },
+      { name: "ReactJs", icon: React },
       { name: "React Hooks", icon: ReactHooks },
       { name: "Redux", icon: Redux },
       { name: "NextJs", icon: NextJs },
