@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-
 import Portfolio from "./Portfolio";
 import ProjectDetails from "./pages/ProjectDetails";
 import NotFound from "./pages/NotFound";
