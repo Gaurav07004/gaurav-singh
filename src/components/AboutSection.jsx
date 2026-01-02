@@ -107,11 +107,11 @@ export default function AboutSection() {
         font-[Quicksand]
         max-w-337.5 mx-auto
 
-        px-6 pt-10 pb-10
+        px-6 pt-20 pb-10
         sm:px-8 sm:pt-20
-        md:px-10 md:pt-20
-        lg:px-12 lg:pt-20
-        xl:px-6
+        md:px-10 md:pt-25
+        lg:px-12 lg:pt-25
+        xl:px-6 xl:pt-25
       "
     >
       <h2 className="flex items-center gap-4">

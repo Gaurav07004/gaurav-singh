@@ -12,7 +12,7 @@ export default function ContactSection() {
         px-6 pt-10 pb-10
         sm:px-8 sm:pt-20
         md:px-10 md:pt-20
-        lg:px-12 lg:pt-20 lg:pb-16
+        lg:px-12 lg:pt-20
         xl:px-6
       "
     >

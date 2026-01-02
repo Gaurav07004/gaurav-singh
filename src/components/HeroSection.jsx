@@ -18,10 +18,11 @@ export default function DashboardContent() {
         flex flex-col
         items-center
         gap-14
+        
         px-6 pt-30 pb-10
         sm:px-8 sm:pt-30
         md:px-10 md:pt-50
-        lg:px-12 lg:pt-50 lg:pb-16
+        lg:px-12 lg:pt-50
         xl:px-6
 
         md:flex-col md:justify-between md:items-start md:gap-8
