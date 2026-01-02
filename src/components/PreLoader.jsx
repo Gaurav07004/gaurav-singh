@@ -4,9 +4,7 @@ export default function Preloader() {
   const [hide, setHide] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => {
-      setHide(true);
-    }, 3800);
+    const t = setTimeout(() => setHide(true), 3800);
     return () => clearTimeout(t);
   }, []);
 
@@ -15,11 +13,13 @@ export default function Preloader() {
   const name = "GAURAV";
 
   return (
-    <div className="fixed inset-0 flex z-99">
+    <div className="fixed inset-0 flex z-50">
       {Array.from({ length: 10 }).map((_, i) => (
         <div
           key={i}
-          className="w-[10%] h-full bg-black"
+          className="
+            w-[10%] h-full bg-black
+          "
           style={{
             animation: `slideDown 0.7s ease-in-out forwards`,
             animationDelay: `${2.1 + i * 0.08}s`,
@@ -28,7 +28,21 @@ export default function Preloader() {
       ))}
 
       <p
-        className="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex overflow-hidden leading-none text-white font-[Anton] text-[18vw] lg:text-[200px] tracking-tight"
+        className="
+          absolute z-50
+          top-1/2 left-1/2
+          -translate-x-1/2 -translate-y-1/2
+          flex overflow-hidden leading-none
+          text-white font-[Anton]
+          
+          text-[24vw]
+          sm:text-[20vw]
+          md:text-[16vw]
+          lg:text-[200px]
+          xl:text-[220px]
+
+          tracking-tight
+        "
         style={{
           animation: `
             textHold 1.5s linear 0.6s forwards,
@@ -39,6 +53,9 @@ export default function Preloader() {
         {name.split("").map((ch, i) => (
           <span
             key={i}
+            className="
+              inline-block
+            "
             style={{
               transform: "translateY(100%)",
               opacity: 0,

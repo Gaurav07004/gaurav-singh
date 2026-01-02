@@ -18,19 +18,25 @@ export default function ProjectDetails() {
   if (!project) return <h2>Project not found</h2>;
 
   return (
-    <section className="max-w-300 mx-auto px-12 py-20 font-[Quicksand] bg-(--bg-dark)">
-      <Link to="/" className="flex items-center gap-2">
-        <HiOutlineArrowLeft className="text-lg font-bold text-(--primary) uppercase" />{" "}
-        <span className="text-base font-bold text-(--primary) uppercase">
+    <section
+      className="max-w-300 mx-auto px-6 pt-10 pb-10
+        sm:px-8 sm:pt-20
+        md:px-10 md:pt-20
+        lg:px-12 lg:pt-20 lg:pb-16
+        xl:px-6 font-[Quicksand] bg-(--bg-dark)"
+    >
+      <Link to="/" className="flex items-center gap-2 group w-fit">
+        <HiOutlineArrowLeft className="xl:text-lg group-hover:text-(--secondary) font-bold text-(--primary) uppercase" />{" "}
+        <span className="xl:text-base text-sm font-bold group-hover:text-(--secondary) text-(--primary) uppercase">
           Back
         </span>
       </Link>
 
-      <h1 className="mt-4 text-4xl font-bold text-(--primary)">
-        {project.name} - {project.type}
+      <h1 className="mt-4 xl:text-4xl text-2xl font-bold text-(--primary)">
+        {project.name} : {project.type}
       </h1>
 
-      <p className="mt-6 text-base text-(--secondary-light) text-justify">
+      <p className="mt-4 xl:text-base text-sm  text-(--secondary-light) text-justify">
         {project.description}
       </p>
 
@@ -40,7 +46,7 @@ export default function ProjectDetails() {
         className="mt-6 w-full h-full rounded object-contain"
       />
 
-      <h3 className="mt-8 text-base uppercase font-semibold text-(--primary)">
+      <h3 className="mt-8 xl:text-base text-sm uppercase font-semibold text-(--primary)">
         Technologies Used
       </h3>
 
@@ -49,7 +55,7 @@ export default function ProjectDetails() {
           <li
             key={skill}
             className="px-3 py-2
-                    rounded text-sm
+                    rounded xl:text-sm text-xs
                     bg-[#1d1f23]
                     border border-[#2a2d31]
                     hover:border-(--primary)
@@ -62,28 +68,37 @@ export default function ProjectDetails() {
         ))}
       </ul>
 
-      <h3 className="mt-8 text-base uppercase font-semibold text-(--primary)">
+      <h3 className="mt-8 xl:text-base text-sm uppercase font-semibold text-(--primary)">
         Key Features
       </h3>
 
       <ul className="mt-3 text-(--secondary-light)">
         {project.keyFeatures.map((feature) => (
-          <div key={feature} className="flex items-center gap-2">
-            <RiArrowRightSLine className="text-base text-(--primary)" />
-            {feature}
+          <div key={feature} className="flex items-start gap-2 w-full mb-2">
+            <div className="mt-1 width-1/2">
+              <RiArrowRightSLine className="text-(--primary) width-1/2" />
+            </div>
+            <span className="width-1/2 xl:text-base text-sm">{feature}</span>
           </div>
         ))}
       </ul>
 
-      <h3 className="mt-8 text-base font-semibold text-(--primary) uppercase">
+      <h3 className="mt-8 xl:text-base text-sm font-semibold text-(--primary) uppercase">
         Technical Highlights
       </h3>
 
       <ul className="mt-3 text-(--secondary-light)">
         {project.technicalHighlights.map((technicalHighlights) => (
-          <div key={technicalHighlights} className="flex items-center gap-2">
-            <RiArrowRightSLine className="text-base text-(--primary)" />
-            {technicalHighlights}
+          <div
+            key={technicalHighlights}
+            className="flex items-start gap-2 w-full mb-2"
+          >
+            <div className="mt-1 width-1/2">
+              <RiArrowRightSLine className="text-(--primary) width-1/2" />
+            </div>
+            <span className="width-1/2 xl:text-base text-sm">
+              {technicalHighlights}
+            </span>
           </div>
         ))}
       </ul>
@@ -96,11 +111,11 @@ export default function ProjectDetails() {
                 inline-block
                 px-5 py-3
                 rounded
-                text-sm uppercase tracking-wide
+                text-[0.8rem] uppercase tracking-wide
                 border border-(--primary)
                 text-(--primary)
-                transition-all duration-300
-                hover:shadow-[0_12px_28px_rgba(0,0,0,0.25)]
+                transition-all duration-500
+                hover:font-bold
                 hover:bg-(--primary-light)
                 hover:text-black
                 hover:border-(--primary-light)
@@ -116,11 +131,11 @@ export default function ProjectDetails() {
                 inline-block
                 px-5 py-3
                 rounded
-                text-sm uppercase tracking-wide
+                text-[0.8rem] uppercase tracking-wide
                 border border-(--primary)
                 text-(--primary)
-                transition-all duration-300
-                hover:shadow-[0_12px_28px_rgba(0,0,0,0.25)]
+                transition-all duration-500
+                hover:font-bold
                 hover:bg-(--primary-light)
                 hover:text-black
                 hover:border-(--primary-light)

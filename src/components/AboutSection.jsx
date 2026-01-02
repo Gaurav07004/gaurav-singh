@@ -33,14 +33,8 @@ export default function AboutSection() {
   ];
 
   const coreProfile = [
-    {
-      title: "Specialization",
-      value: "Full Stack Development",
-    },
-    {
-      title: "Focus Areas",
-      value: "Backend Systems & API Development",
-    },
+    { title: "Specialization", value: "Full Stack Development" },
+    { title: "Focus Areas", value: "Backend Systems & API Development" },
     {
       title: "Development Mindset",
       value: "Clean Architecture & Maintainable Codebase",
@@ -61,7 +55,6 @@ export default function AboutSection() {
         { name: "JavaScript", icon: Javascript },
       ],
     },
-
     {
       category: "Frontend",
       items: [
@@ -76,7 +69,6 @@ export default function AboutSection() {
         { name: "ChartJs", icon: ChartJs },
       ],
     },
-
     {
       category: "Backend",
       items: [
@@ -87,7 +79,6 @@ export default function AboutSection() {
         { name: "Nodemailer", icon: Nodemailer },
       ],
     },
-
     {
       category: "Database",
       items: [
@@ -96,7 +87,6 @@ export default function AboutSection() {
         { name: "PostgreSQL", icon: PostgreSQL },
       ],
     },
-
     {
       category: "Tools & Platforms",
       items: [
@@ -116,11 +106,16 @@ export default function AboutSection() {
       className="
         font-[Quicksand]
         max-w-337.5 mx-auto
-        px-12 pt-30 pb-10
+
+        px-6 pt-10 pb-10
+        sm:px-8 sm:pt-20
+        md:px-10 md:pt-20
+        lg:px-12 lg:pt-20
+        xl:px-6
       "
     >
       <h2 className="flex items-center gap-4">
-        <IoFlowerOutline className="text-2xl font-bold text-(--primary) uppercase slow-spin" />{" "}
+        <IoFlowerOutline className="text-2xl font-bold text-(--primary) uppercase slow-spin" />
         <span className="text-2xl font-bold text-(--primary) uppercase">
           About Me
         </span>
@@ -129,7 +124,17 @@ export default function AboutSection() {
       {aboutParagraphs.map((text, idx) => (
         <p
           key={idx}
-          className="mt-4 text-(--secondary-light) leading-relaxed text-lg text-justify"
+          className="
+            mt-4
+            text-(--secondary-light)
+            leading-relaxed
+            text-[15px]
+            text-justify
+
+            sm:text-base
+            md:text-[17px]
+            xl:max-w-full
+          "
         >
           {text}
         </p>
@@ -139,39 +144,74 @@ export default function AboutSection() {
         Core Development Profile
       </h3>
 
-      <div className="mt-4 grid grid-cols-3 gap-4">
+      <div
+        className="
+          mt-4
+          grid grid-cols-1
+          gap-4
+
+          sm:grid-cols-2
+          lg:grid-cols-3
+        "
+      >
         {coreProfile.map((item) => (
           <div
             key={item.title}
-            className="p-6 rounded-lg bg-(--chip) border border-(--border)"
+            className="
+              p-6 rounded-lg
+              bg-(--chip)
+              border border-(--border)
+            "
           >
             <p className="text-sm uppercase tracking-wide text-(--secondary-light)">
               {item.title}
             </p>
-            <h4 className="mt-2 text-[1.05rem] font-semibold text-(--primary)">
+            <h4 className="mt-2 xl:text-[1.05rem] text-[0.9rem] font-semibold text-(--primary)">
               {item.value}
             </h4>
           </div>
         ))}
       </div>
 
-      <div className="mt-4 p-6 rounded-lg bg-(--chip) border border-(--border)">
+      <div
+        className="
+          mt-4
+          p-6 rounded-lg
+          bg-(--chip)
+          border border-(--border)
+        "
+      >
         <p className="text-sm uppercase tracking-wide text-(--secondary-light)">
           Currently strengthening expertise in
         </p>
 
-        <h4 className="mt-2 text-[1.055rem] font-semibold text-(--primary)">
+        <h4 className="mt-2 xl:text-[1.05rem] text-[0.9rem] font-semibold text-(--primary)">
           {currentFocus.join(" | ")}
         </h4>
       </div>
+
       <h3 className="mt-10 text-base font-bold text-(--secondary-light) uppercase">
         Technical Skills
       </h3>
-      <div className="mt-4 grid grid-cols-2 gap-4">
+
+      <div
+        className="
+          mt-4
+          grid grid-cols-1
+          gap-4
+
+          sm:grid-cols-2
+          xl:grid-cols-2
+        "
+      >
         {skills.map((group) => (
           <div
             key={group.category}
-            className="p-6 rounded-lg bg-(--chip) border border-(--border)"
+            className="
+              p-6 rounded-lg
+              bg-(--chip)
+              border border-(--border)
+            "
           >
             <p className="text-sm uppercase tracking-wide text-(--secondary-light)">
               {group.category}
@@ -190,15 +230,14 @@ export default function AboutSection() {
                     hover:border-(--primary)
                     hover:bg-[#22262b]
                     transition
-                    "
+                  "
                 >
                   <img
                     src={skill.icon}
                     alt={skill.name}
                     className="w-5 h-5 object-contain"
                   />
-
-                  <span className="text-sm text-(--secondary)">
+                  <span className="xl:text-sm text-[0.8rem] text-(--secondary)">
                     {skill.name}
                   </span>
                 </div>
