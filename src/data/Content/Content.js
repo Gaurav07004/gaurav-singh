@@ -1,4 +1,4 @@
-import Cpp from "../../assets/CPP.svg";
+import Cpp from "../../assets/cpp.svg";
 import Javascript from "../../assets/javascript.svg";
 import Html5 from "../../assets/HTML5.svg";
 import Css3 from "../../assets/CSS3.svg";
