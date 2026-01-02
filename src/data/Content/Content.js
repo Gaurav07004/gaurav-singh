@@ -1,7 +1,7 @@
-import CPP from "../../assets/CPP.svg";
+import Cpp from "../../assets/CPP.svg";
 import Javascript from "../../assets/javascript.svg";
-import HTML5 from "../../assets/HTML5.svg";
-import CSS3 from "../../assets/CSS3.svg";
+import Html5 from "../../assets/HTML5.svg";
+import Css3 from "../../assets/CSS3.svg";
 import ReactIcon from "../../assets/React.svg";
 import ReactHooks from "../../assets/ReactHooks.svg";
 import Redux from "../../assets/Redux.svg";
@@ -64,15 +64,15 @@ export const skills = [
   {
     category: "Programming Languages",
     items: [
-      { name: "C++", icon: CPP },
+      { name: "C++", icon: Cpp },
       { name: "JavaScript", icon: Javascript },
     ],
   },
   {
     category: "Frontend",
     items: [
-      { name: "HTML5", icon: HTML5 },
-      { name: "CSS3", icon: CSS3 },
+      { name: "HTML5", icon: Html5 },
+      { name: "CSS3", icon: Css3 },
       { name: "ReactJs", icon: ReactIcon },
       { name: "React Hooks", icon: ReactHooks },
       { name: "Redux", icon: Redux },
