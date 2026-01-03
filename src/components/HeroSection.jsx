@@ -105,6 +105,12 @@ export default function DashboardContent() {
               to={Resume}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Open Gaurav Singh resume"
+              aria-roledescription="Resume link"
+              tabIndex={0}
+              referrerPolicy="no-referrer"
+              data-analytics="resume-click"
+              data-testid="resume-link"
               className="
                 md:hidden lg:hidden
                 inline-block
