@@ -2,6 +2,7 @@ import ArrowAnimation from "./ArrowAnimation";
 import { NavLink } from "react-router-dom";
 import { stats, about } from "../data/Content/Content";
 import resume from "../data/Resume/Gaurav-Singh.pdf";
+import ScrollToTop from "./ScrollToTop";
 
 export default function DashboardContent() {
   return (
@@ -155,6 +156,7 @@ export default function DashboardContent() {
       </section>
 
       <ArrowAnimation />
+      <ScrollToTop />
     </main>
   );
 }

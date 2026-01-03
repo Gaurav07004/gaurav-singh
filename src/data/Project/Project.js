@@ -1,11 +1,14 @@
 import Admin360 from "../../assets/Admin360.png";
 import NextBoarding from "../../assets/NextBoarding.png";
+import Travel from "../../assets/TravelIcon.svg";
+import Admin from "../../assets/AdminIcon.svg";
 const projects = [
   {
     id: "next-boarding",
     name: "Next Boarding",
     type: "Travel Booking Platform",
     year: 2024,
+    icon: Travel,
     image: NextBoarding,
     techAndTechnique: [
       "ReactJs",
@@ -48,6 +51,7 @@ const projects = [
     name: "Admin 360",
     type: "Administrative Dashboard",
     year: 2024,
+    icon: Admin,
     image: Admin360,
     techAndTechnique: [
       "NextJs",
