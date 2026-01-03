@@ -1,7 +1,7 @@
 import ArrowAnimation from "./ArrowAnimation";
 import { NavLink } from "react-router-dom";
 import { stats, about } from "../data/Content/Content";
-import resume from "../data/Resume/Gaurav-Singh.pdf";
+import Resume from "../data/Resume/Gaurav_Singh.pdf";
 import ScrollToTop from "./ScrollToTop";
 
 export default function DashboardContent() {
@@ -102,7 +102,7 @@ export default function DashboardContent() {
             </NavLink>
 
             <NavLink
-              to={resume}
+              to={Resume}
               target="_blank"
               rel="noopener noreferrer"
               className="

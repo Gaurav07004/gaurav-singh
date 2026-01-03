@@ -5,7 +5,7 @@ import { RxCross1 } from "react-icons/rx";
 import { PiLinkedinLogoLight, PiGithubLogoLight } from "react-icons/pi";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { IoMailOutline } from "react-icons/io5";
-import resume from "../data/Resume/Gaurav-Singh.pdf";
+import Resume from "../data/Resume/Gaurav_Singh.pdf";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -52,7 +52,7 @@ export default function Navbar() {
       <nav className="fixed w-full xl:py-6 xl:px-10 p-6 flex justify-end bg-(--bg-dark) z-40">
         <div className="flex items-center gap-12">
           <NavLink
-            to={resume}
+            to={Resume}
             target="_blank"
             rel="noopener noreferrer"
             className="
