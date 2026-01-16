@@ -93,7 +93,14 @@ export default function AboutSection() {
         </p>
 
         <h4 className="mt-2 xl:text-[1.05rem] text-[0.9rem] font-semibold text-(--primary)">
-          {currentFocus.join(" | ")}
+          {currentFocus.map((item, index) => (
+            <span key={item}>
+              {item}
+              {index !== currentFocus.length - 1 && (
+                <span className="text-(--secondary-light)"> | </span>
+              )}
+            </span>
+          ))}
         </h4>
       </div>
 

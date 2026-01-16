@@ -52,9 +52,14 @@ export default function WorkExperience() {
                 sm:flex-col sm:justify-between sm:items-start
               "
             >
-              <h3 className="xl:text-[1.25rem] sm:text-[1.2rem] text-base font-semibold text-white">
-                {job.role} @ {job.company}
-              </h3>
+              <div>
+                <h3 className="xl:text-[1.25rem] sm:text-[1.2rem] text-base font-semibold text-white uppercase">
+                  {job.role}
+                </h3>
+                <h3 className="xl:text-[1rem] sm:text-[15px] text-[0.9rem] font-semibold text-white">
+                  {job.company}
+                </h3>
+              </div>
               <div className="flex justify-between items-center w-full">
                 <p className="text-[0.8rem] sm:text-[15px] text-(--secondary-light)">
                   {job.locationType} | {job?.location}
@@ -67,7 +72,7 @@ export default function WorkExperience() {
 
             <p
               className="
-                mt-3
+                mt-1
                 text-[14px]
                 text-(--secondary-light)
                 leading-relaxed

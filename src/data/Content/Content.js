@@ -47,7 +47,7 @@ export const aboutParagraphs = [
 
 export const coreProfile = [
   { title: "Specialization", value: "Full Stack Development" },
-  { title: "Focus Areas", value: "Backend Systems & API Development" },
+  { title: "Focus Areas", value: "Backend Technologies & API Development" },
   {
     title: "Development Mindset",
     value: "Clean Architecture & Maintainable Codebase",
@@ -55,8 +55,9 @@ export const coreProfile = [
 ];
 
 export const currentFocus = [
-  "System Design",
-  "Performance Engineering",
+  "JavaScript",
+  "ReactJs",
+  "Backend Technologies",
   "Scalable Architecture",
 ];
 
@@ -115,13 +116,13 @@ export const skills = [
 
 export const experience = [
   {
-    role: "Frontend Engineer Intern",
+    role: "Frontend Developer",
     company: "Webxces Technologies",
     location: "Mumbai",
     locationType: "Onsite",
     duration: "June 2025 - September 2025",
     summary:
-      "Worked as a Frontend Engineer Intern at Webxces Technologies, where I built responsive and performance-optimized web interfaces using React.js. I developed reusable component-based UI with React Hooks, implemented state management using Redux, and integrated RESTful APIs in collaboration with backend engineers. I also worked on interactive dashboards using Chart.js, optimized application performance through lazy loading and efficient rendering, and participated in agile processes such as sprint planning, daily standups, and code reviews while collaborating closely with designers and developers to deliver clean, maintainable features.",
+      "Worked as a Intern at Webxces Technologies, where I built responsive and performance-optimized web interfaces using React.js. I developed reusable component-based UI with React Hooks, implemented state management using Redux, and integrated RESTful APIs in collaboration with backend engineers. I also worked on interactive dashboards using Chart.js, optimized application performance through lazy loading and efficient rendering, and participated in agile processes such as sprint planning, daily standups, and code reviews while collaborating closely with designers and developers to deliver clean, maintainable features.",
     tech: [
       "ReactJs",
       "React Hooks",
