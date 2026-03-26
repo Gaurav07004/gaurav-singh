@@ -25,8 +25,8 @@ import Vercel from "../../assets/Vercel.svg";
 import Figma from "../../assets/Figma.svg";
 
 export const stats = [
-  { value: "2", label: "Years of Development Experience" },
-  { value: "5", label: "Completed Projects" },
+  { value: "02", label: "Years of Development Experience" },
+  { value: "05", label: "Completed Projects" },
   { value: "400", label: "Hours of Practical Learning" },
 ];
 
