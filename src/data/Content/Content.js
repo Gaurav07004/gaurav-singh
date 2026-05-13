@@ -25,9 +25,9 @@ import Vercel from "../../assets/Vercel.svg";
 import Figma from "../../assets/Figma.svg";
 
 export const stats = [
-  { value: "02", label: "Years of Development Experience" },
-  { value: "05", label: "Completed Projects" },
-  { value: "400", label: "Hours of Practical Learning" },
+  { value: "01", label: "Years of Professional Experience" },
+  { value: "02", label: "Production SaaS Platforms Shipped" },
+  { value: "05", label: "Projects Delivered" },
 ];
 
 export const about = [
@@ -35,14 +35,14 @@ export const about = [
     name: "Gaurav Singh",
     designation: "A Full Stack Engineer",
     about:
-      "I build scalable, user-focused web applications with clean interfaces, reliable backends, and strong performance. I enjoy working across the stack from intuitive UI design to secure APIs and database systems, focusing on clean architecture, maintainable code, and real-world impact.",
+      "I build scalable SaaS and enterprise web applications using React.js, Redux Toolkit, and Node.js. Currently at Vitorscape Technologies, I ship production-ready features across HRMS, attendance management, and admin platforms — focusing on clean component architecture, optimized state management, and secure authentication workflows.",
   },
 ];
 
 export const aboutParagraphs = [
-  "I am Gaurav Singh, a Full Stack Engineer and B.Tech Computer Science graduate from the University of Mumbai (2025). I work across the stack with ReactJS, NodeJS, ExpressJS, and MongoDB, focusing on building scalable web applications, improving user experience, and delivering reliable backend systems.",
-  "I have built booking platforms, admin dashboards, and data-driven applications, working on performance optimization, REST API integration, authentication, and responsive UI development. I follow clean coding practices and take a structured, problem-solving approach while developing features and systems.",
-  "I am currently strengthening my expertise in backend engineering, system design, and scalable architecture, and I look forward to contributing to impactful engineering teams and real-world products.",
+  "I am Gaurav Singh, a Software Developer at Vitorscape Technologies, building scalable SaaS and enterprise web applications using React.js, Redux Toolkit, RTK Query, and Node.js. I graduated with a B.Tech in Internet of Things from Thakur College of Engineering and Technology, Mumbai, with a CGPA of 9.10.",
+  "Currently, I contribute to JRC and Haarji — HRMS platforms serving enterprise clients — delivering features across attendance management, approval workflows, payroll operations, and admin dashboards. I focus on component-driven architecture, optimized state management with RTK Query, secure authentication via RBAC and JWT, and cloud integrations using AWS S3 and Lambda.",
+  "Beyond my professional work, I have shipped full-stack projects including Next Boarding, a travel booking platform with real-time seat selection and JWT authentication, and Admin 360, a Next.js SSR admin dashboard with role-based access control and Chart.js visualizations. I am always looking to contribute to impactful engineering teams building real-world products.",
 ];
 
 export const coreProfile = [
@@ -55,10 +55,11 @@ export const coreProfile = [
 ];
 
 export const currentFocus = [
+  "Redux Toolkit & RTK Query",
+  "Next.js & SSR Patterns",
+  "AWS Cloud Services",
+  "System Design Fundamentals",
   "JavaScript",
-  "ReactJs",
-  "Backend Technologies",
-  "Scalable Architecture",
 ];
 
 export const skills = [
@@ -116,22 +117,24 @@ export const skills = [
 
 export const experience = [
   {
-    role: "Frontend Developer",
-    company: "Webxces Technologies",
+    role: "Software Developer",
+    company: "Vitorscape Technologies",
     location: "Mumbai",
     locationType: "Onsite",
-    duration: "June 2025 - September 2025",
+    duration: "June 2025 - Present",
     summary:
-      "Worked as a Intern at Webxces Technologies, where I built responsive and performance-optimized web interfaces using React.js. I developed reusable component-based UI with React Hooks, implemented state management using Redux, and integrated RESTful APIs in collaboration with backend engineers. I also worked on interactive dashboards using Chart.js, optimized application performance through lazy loading and efficient rendering, and participated in agile processes such as sprint planning, daily standups, and code reviews while collaborating closely with designers and developers to deliver clean, maintainable features.",
+      "At Vitorscape Technologies, I build and maintain scalable SaaS web applications for HRMS, attendance tracking, approval workflows, and payroll operations across JRC and Haarji platforms serving enterprise clients. I architected a reusable component-driven UI library using React.js and Tailwind CSS, implemented Redux Toolkit with RTK Query for optimized API caching and backend-driven pagination, and built dynamic dashboards and Chart.js visualizations for real-time analytics. I enforced application security via RBAC, JWT authentication, and client-side encryption, integrated AWS S3 and Lambda for cloud workflows, and improved performance through lazy loading and memoization.",
     tech: [
-      "ReactJs",
-      "React Hooks",
-      "Redux",
-      "JavaScript",
-      "ChartJs",
-      "REST APIs",
-      "Git",
-      "GitHub",
+      "React.js",
+      "Redux Toolkit",
+      "RTK Query",
+      "Tailwind CSS",
+      "Node.js",
+      "Chart.js",
+      "AWS S3",
+      "AWS Lambda",
+      "JWT",
+      "RBAC",
     ],
   },
 ];

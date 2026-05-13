@@ -154,7 +154,7 @@ export default function DashboardContent() {
               <span className="text-3xl sm:text-4xl">+</span>
             </p>
 
-            <p className="mt-2 text-[11px] sm:text-[12px] tracking-wider text-(--secondary-light)">
+            <p className="mt-2 text-[11px] sm:text-[16px] tracking-wider text-(--secondary-light)">
               {item.label}
             </p>
           </div>
