@@ -40,7 +40,7 @@ export default function NotFound() {
           md:text-[20px]
         "
       >
-        The page you’re looking for doesn’t exist or has been moved.
+        The page you're looking for doesn't exist or has been moved.
       </p>
 
       <NavLink

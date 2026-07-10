@@ -42,45 +42,16 @@ export default function Navbar() {
 
   const navLinks = [
     { id: "Home", label: "Home", color: "bg-cyan-400" },
-    { id: "About-Me", label: "About Me", color: "bg-blue-400" },
+    { id: "About-Me", label: "About Me", color: "bg-purple-400" },
+    { id: "Tech-Stack", label: "Tech Stack", color: "bg-orange-400" },
     { id: "Work-Experience", label: "Experience", color: "bg-emerald-400" },
-    { id: "Projects", label: "Projects", color: "bg-indigo-400" },
+    { id: "Projects", label: "Projects", color: "bg-red-400" },
   ];
 
   return (
     <>
       <nav className="fixed w-full xl:py-6 xl:px-10 p-6 flex justify-end bg-(--bg-dark) z-40">
         <div className="flex items-center gap-12">
-          <NavLink
-            to={Resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Gaurav Singh resume"
-            aria-roledescription="Resume link"
-            tabIndex={0}
-            referrerPolicy="no-referrer"
-            data-analytics="resume-click"
-            data-testid="resume-link"
-            className="
-              hidden
-              md:inline-block
-              lg:inline-block
-              xl:inline-block
-              px-5 py-3
-              rounded
-              text-[0.8rem] uppercase tracking-wide
-              border border-(--primary)
-              text-(--primary)
-              transition-all duration-500
-              hover:font-bold
-              hover:bg-(--primary-light)
-              hover:text-black
-              hover:border-(--primary-light)
-            "
-          >
-            View Resume
-          </NavLink>
-
           <div
             onClick={handleOpenMenu}
             className="
@@ -173,7 +144,7 @@ export default function Navbar() {
                     >
                       <span
                         className={`
-                          relative w-3 h-3 rounded-full ${link.color}
+                          relative w-3 h-3 rounded ${link.color}
                           transition-all duration-300
                           group-hover:scale-200
                         `}

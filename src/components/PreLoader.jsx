@@ -18,7 +18,7 @@ export default function Preloader() {
         <div
           key={i}
           className="
-            w-[10%] h-full bg-black
+            w-[10%] h-full bg-(--bg-darker)
           "
           style={{
             animation: `slideDown 0.7s ease-in-out forwards`,
@@ -29,19 +29,21 @@ export default function Preloader() {
 
       <p
         className="
-          absolute z-50
-          top-1/2 left-1/2
-          -translate-x-1/2 -translate-y-1/2
-          flex overflow-hidden leading-none
-          text-white font-[Anton]
-          
-          text-[24vw]
+          absolute
+          inset-0
+          flex
+          items-center
+          justify-center
+          text-(--primary)
+          font-[Anton]
+          leading-none
+          whitespace-nowrap
+
+          text-[22vw]
           sm:text-[20vw]
           md:text-[16vw]
           lg:text-[200px]
           xl:text-[220px]
-
-          tracking-tight
         "
         style={{
           animation: `

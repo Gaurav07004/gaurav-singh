@@ -6,14 +6,16 @@ import AboutSection from "./components/AboutSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
+import TechStackSection from "./components/TechStackSection";
 
 export default function Portfolio() {
   return (
-    <main className="bg-(--bg-dark) font-[Quicksand]">
+    <main className="portfolio-shell bg-(--bg-dark) font-[Quicksand]">
       <Navbar />
       <PreLoader />
       <HeroSection />
       <AboutSection />
+      <TechStackSection />
       <ExperienceSection />
       <ProjectsSection />
       <ContactSection />

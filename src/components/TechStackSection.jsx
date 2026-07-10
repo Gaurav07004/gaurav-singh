@@ -1,100 +1,60 @@
-const stackCategories = [
-  {
-    title: "Frontend",
-    items: [
-      "React",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Tailwind",
-      "Redux Toolkit",
-    ],
-  },
-  {
-    title: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs", "JWT Auth"],
-  },
-  {
-    title: "Database",
-    items: ["MongoDB", "Mongoose", "Mongo Atlas"],
-  },
-  {
-    title: "Tools & Workflow",
-    items: ["Git", "GitHub", "Postman", "Agile", "VS Code"],
-  },
-];
+import { IoFlowerOutline } from "react-icons/io5";
+import { FaCode } from "react-icons/fa6";
+import { currentFocus, skills } from "../data/Content/Content";
 
 export default function TechStackSection() {
   return (
-    <section
-      id="stack"
-      className="
-        font-[Quicksand]
-        max-w-337.5 mx-auto
-        px-12 pt-30 pb-20
-      "
-    >
-      <header className="flex items-center gap-4">
-        <h2 className="text-4xl font-bold text-(--primary) uppercase">
-          My Tech Stack
-        </h2>
+    <section id="Tech-Stack" className="tech-section font-[Quicksand]">
+      <header className="tech-header">
+        <div className="tech-kicker">
+          <IoFlowerOutline className="text-xl text-(--primary) slow-spin" />
+          <span>Tech Stack</span>
+        </div>
 
-        <span className="w-40 h-px bg-(--secondary-light)" />
+        <div className="tech-heading-grid">
+          <h2>Practical tools for shipping full-stack products.</h2>
+
+          <p>
+            A focused stack around React interfaces, Redux data flows, Node.js
+            APIs, secure authentication, cloud integrations, and modern delivery
+            workflows.
+          </p>
+        </div>
       </header>
 
-      <p className="mt-4 text-lg text-(--secondary-light) max-w-3xl">
-        I work across the full stack with a focus on clean architecture,
-        performance, and maintainable code.
-      </p>
+      <section className="tech-focus">
+        <div>
+          <p className="tech-section-label">Currently Strengthening</p>
 
-      <div className="mt-10 grid grid-cols-2 gap-6">
-        {stackCategories.map((group) => (
-          <div
-            key={group.title}
-            className="
-              p-6 rounded-xl
-              bg-(--chip)
-              border border-(--border)
-              hover:border-(--primary)
-              transition
-            "
-          >
-            <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold text-(--primary)">
-                {group.title}
-              </h3>
+          <h3>Improving the stack I use for scalable product work.</h3>
+        </div>
 
-              <div
-                className="
-                  w-6 h-6 rounded-full
-                  border border-(--primary)
-                  animate-[spin_22s_linear_infinite]
-                "
-              />
+        <div className="tech-focus-list">
+          {currentFocus.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="tech-grid">
+        {skills.map((group) => (
+          <article key={group.category} className="tech-card">
+            <div className="tech-card-header">
+              <div className="tech-card-icon">
+                <FaCode />
+              </div>
+
+              <h3>{group.category}</h3>
             </div>
 
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {group.items.map((item) => (
-                <li
-                  key={item}
-                  className="
-                    px-3 py-1 text-[13px]
-                    rounded-full
-                    bg-(--badge)
-                    border border-(--border)
-                    text-(--secondary)
-                    hover:text-(--primary)
-                    hover:border-(--primary)
-                    transition
-                  "
-                >
-                  {item}
-                </li>
+            <div className="tech-skill-list">
+              {group.items.map((skill) => (
+                <span key={skill}>{skill}</span>
               ))}
-            </ul>
-          </div>
+            </div>
+          </article>
         ))}
-      </div>
+      </section>
     </section>
   );
 }

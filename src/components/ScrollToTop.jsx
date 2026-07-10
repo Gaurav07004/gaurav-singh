@@ -30,7 +30,7 @@ export default function ScrollToTop() {
         fixed bottom-8 right-8
         w-11 h-11
         grid place-items-center
-        rounded-lg
+        rounded
         border border-(--primary)
         text-(--primary)
         transition-all duration-300

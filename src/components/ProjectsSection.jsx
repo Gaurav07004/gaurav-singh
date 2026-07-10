@@ -1,101 +1,66 @@
 import { IoFlowerOutline } from "react-icons/io5";
+import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import projects from "../data/Project/Project";
 
 export default function Projects() {
   return (
-    <section
-      id="Projects"
-      className="
-        font-[Quicksand]
-        max-w-337.5 mx-auto
-        
-        px-6 pt-20 pb-10
-        sm:px-8 sm:pt-20
-        md:px-10 md:pt-25
-        lg:px-12 lg:pt-25
-        xl:px-6 xl:pt-25
-      "
-    >
-      <h2 className="flex items-center gap-4">
-        <IoFlowerOutline className="text-2xl font-bold text-(--primary) uppercase slow-spin" />
-        <span className="text-2xl font-bold text-(--primary) uppercase">
-          Selected Projects
-        </span>
-      </h2>
+    <section id="Projects" className="projects-section font-[Quicksand]">
+      <header className="projects-header">
+        <div className="projects-kicker">
+          <IoFlowerOutline className="text-xl text-(--primary) slow-spin" />
+          <span>Projects</span>
+        </div>
 
-      <div
-        className="
-          mt-6
+        <div className="projects-heading-grid">
+          <h2>Production-ready applications built for real users.</h2>
 
-          grid grid-cols-1
-          gap-4
+          <p>
+            A collection of full-stack applications focused on scalable React
+            interfaces, secure backend systems, modern UI design, enterprise
+            workflows, and real-world problem solving.
+          </p>
+        </div>
+      </header>
 
-          sm:grid-cols-1
-          lg:grid-cols-2 lg:gap-4
-          xl:gap-4
-        "
-      >
+      <section className="projects-grid">
         {projects.map((project) => (
-          <div
-            key={project.name}
-            className="
-              p-6
-              rounded-xl
-              bg-(--chip)
-              border border-(--border)
-              transition
-              flex flex-col justify-between items-start
+          <article key={project.id} className="project-card">
+            <div className="project-content">
+              <div className="project-card-top">
+                <div className="project-title">
+                  <div>
+                    <p className="project-type">{project.type}</p>
 
-              sm:p-7
-              md:p-8
-            "
-          >
-            <section>
-              <h3 className="xl:text-[1.25rem] sm:text-[1.2rem] text-base font-semibold text-white">
-                {project.name} : {project.type}
-              </h3>
+                    <h3>{project.name}</h3>
+                  </div>
+                </div>
 
-              <p
-                className="
-                  mt-3
-                  text-[14px]
-                  text-(--secondary-light)
-                  leading-relaxed
-                  text-justify
+                <div className="project-year">
+                  <span>{project.year}</span>
 
-                  sm:text-[15px]
-                  md:text-[16px]
-                  xl:max-w-5xl
-                "
-              >
-                {project.description}
-              </p>
-            </section>
+                  <HiArrowUpRight
+                    className="project-arrow"
+                    aria-hidden="true"
+                  />
+                </div>
+              </div>
 
-            <div className="mt-5 flex gap-4">
-              <Link
-                to={`/projects/${project.id}`}
-                className="
-                  inline-block
-                  px-5 py-3
-                  rounded
-                  text-[0.8rem] uppercase tracking-wide
-                  border border-(--primary)
-                  text-(--primary)
-                  transition-all duration-500
-                  hover:font-bold
-                  hover:bg-(--primary-light)
-                  hover:text-black
-                  hover:border-(--primary-light)
-                  "
-              >
+              <p className="project-description">{project.description}</p>
+
+              <div className="project-tech">
+                {project.techAndTechnique.map((tech) => (
+                  <span key={tech}>{tech}</span>
+                ))}
+              </div>
+
+              <Link to={`/projects/${project.id}`} className="project-button">
                 View Details
               </Link>
             </div>
-          </div>
+          </article>
         ))}
-      </div>
+      </section>
     </section>
   );
 }
