@@ -33,11 +33,11 @@ export default function Navbar() {
       url: "https://github.com/Gaurav07004",
       icon: <PiGithubLogoLight />,
     },
-    {
-      label: "LinkedIn",
-      url: "https://www.linkedin.com/in/gaurav-singh-668584237/",
-      icon: <PiLinkedinLogoLight />,
-    },
+    // {
+    //   label: "LinkedIn",
+    //   url: "https://www.linkedin.com/in/gaurav-singh-668584237/",
+    //   icon: <PiLinkedinLogoLight />,
+    // },
   ];
 
   const navLinks = [

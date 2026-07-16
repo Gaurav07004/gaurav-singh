@@ -122,7 +122,7 @@ export const experience = [
     company: "Webxces Technologies",
     location: "Mumbai",
     locationType: "Onsite",
-    duration: "June 2025 – Present",
+    duration: "January 2025 – Present",
     summary:
       "Contributing to enterprise HRMS and workforce management applications by developing scalable full-stack solutions using Java, Spring Boot, React.js and SQL. Responsible for developing RESTful APIs, integrating frontend and backend systems, implementing secure authentication and authorization, optimizing application performance, and delivering business-critical modules including employee management, attendance, payroll, approvals, compliance, and reporting while following Agile development practices and clean coding standards.",
     tech: [
