@@ -1,108 +1,142 @@
 export const stats = [
   { value: "01", label: "Years of Professional Experience" },
-  { value: "02", label: "Production SaaS Platforms Shipped" },
-  { value: "10", label: "Modules & Features Delivered" },
+  { value: "02", label: "Enterprise Applications Delivered" },
+  { value: "10", label: "Business Modules Developed" },
 ];
 
 export const about = [
   {
     name: "Gaurav Singh",
-    designation: "Full Stack Developer",
+    designation: "Java Full Stack Developer",
     about:
-      "I build scalable SaaS and enterprise web applications using React.js, Redux Toolkit, RTK Query, and Node.js. Currently at Vitorscape Technologies, I ship production-ready features across HRMS, attendance management, approval workflows, and payroll operations - focusing on clean component architecture, optimized API caching, and secure authentication workflows.",
+      "Java Full Stack Developer with 1.5 years of experience building enterprise web applications using Java, Spring Boot, React.js, JavaScript, SQL, and MongoDB. Experienced in developing RESTful APIs, integrating frontend applications with backend services, and building scalable, secure, and maintainable business applications. Understanding of Core Java, Object-Oriented Programming, Spring Boot, Hibernate/JPA, REST APIs, SQL, Git, Maven, and Agile development practices. Passionate about writing clean code, solving complex problems, and building reliable software that delivers business value.",
   },
 ];
 
 export const aboutParagraphs = [
-  "I am Gaurav Singh, a Full Stack Developer at Vitorscape Technologies, building scalable SaaS and enterprise web applications using React.js, Redux Toolkit, RTK Query, and Node.js. I graduated with a B.Tech in Internet of Things from Thakur College of Engineering and Technology, Mumbai, with a CGPA of 9.10.",
-  "Currently, I contribute to JRC and Haajri — HRMS platforms serving enterprise clients — delivering features across attendance management, approval workflows, payroll operations, and admin dashboards. I focus on component-driven architecture, optimized state management with RTK Query, secure authentication via RBAC and JWT, and cloud integrations using AWS S3 and Lambda.",
-  "Beyond my professional work, I have shipped full-stack projects including Next Boarding, a travel booking platform with real-time seat selection and JWT authentication, and Admin 360, a Next.js SSR admin dashboard with role-based access control and Chart.js visualizations. I enjoy working close to the product — owning features end-to-end, from API design to UI delivery.",
+  "I am Gaurav Singh, a Java Full Stack Developer with experience in building scalable and responsive enterprise web applications. I hold a B.Tech in Computer Engineering from Thakur College of Engineering and Technology, Mumbai, graduating with a CGPA of 9.10.",
+  "I have contributed to enterprise HRMS and workforce management applications by developing business-critical modules including employee management, attendance, payroll, approvals, compliance, and reporting. My work involves building responsive user interfaces with React.js, developing RESTful APIs with Spring Boot, integrating databases, implementing secure authentication and authorization, and optimizing application performance while following clean coding standards and Agile development practices.",
+  "I enjoy solving complex business problems through technology and continuously expanding my expertise in Java, Spring Boot, Microservices, SQL optimization, system design, cloud technologies, and modern software architecture. My goal is to build scalable, high-performance applications that deliver real business value.",
 ];
 
 export const coreProfile = [
-  { title: "Specialization", value: "Full Stack Development" },
+  { title: "Specialization", value: "Java Full Stack Development" },
   {
-    title: "Focus Areas",
-    value: "React Ecosystem & Backend APIs",
+    title: "Core Expertise",
+    value: "Java, Spring Boot & React.js",
   },
   {
-    title: "Development Mindset",
-    value: "Clean Architecture & Maintainable Codebase",
+    title: "Engineering Focus",
+    value: "Enterprise Applications & Clean Architecture",
   },
 ];
 
 export const currentFocus = [
-  "Redux Toolkit & RTK Query",
-  "Next.js & SSR Patterns",
-  "AWS Cloud Services",
+  "Core Java & Spring Boot",
+  "REST API Development",
+  "Microservices Architecture",
+  "React.js Ecosystem",
   "System Design Fundamentals",
-  "TypeScript & Type-Safe Patterns",
 ];
 
 export const skills = [
   {
     category: "Programming Languages",
-    items: ["JavaScript (ES6+)", "C++"],
+    items: ["Core Java", , "JavaScript (ES6+)"],
   },
   {
     category: "Frontend",
     items: [
+      "React.js",
+      "Redux Toolkit",
+      "Redux Hooks",
+      "RTK Query",
       "HTML5",
       "CSS3",
-      "ReactJs",
-      "React Hooks",
-      "Redux Toolkit",
-      "RTK Query",
-      "NextJs",
       "Tailwind CSS",
-      "Shadcn UI",
-      "Framer Motion",
-      "ChartJs",
+      "Bootstrap",
+      "Responsive Design",
+      "Chart.js",
     ],
   },
   {
     category: "Backend",
     items: [
-      "NodeJs",
-      "ExpressJs",
+      "Java 8",
+      "Spring Boot",
+      "Hibernate",
+      "JPA",
       "RESTful APIs",
+      "Microservices",
+      "Spring Security",
       "JWT Authentication",
-      "Role-Based Access Control",
-      "Nodemailer",
+      "Role-Based Access Control (RBAC)",
+      "Bean Validation",
+      "Exception Handling",
+      "Maven",
     ],
   },
   {
-    category: "Database",
-    items: ["MongoDB", "MySQL"],
+    category: "Databases",
+    items: ["MySQL", "MongoDB", "SQL Queries"],
   },
   {
-    category: "Cloud & DevOps",
-    items: ["AWS S3", "AWS Lambda", "Vercel", "Render", "CI/CD Pipelines"],
+    category: "Version Control & Build Tools",
+    items: ["Git", "GitHub", "Maven", "GitHub Actions"],
   },
   {
-    category: "Tools & Platforms",
-    items: ["Git", "GitHub", "Postman", "VS Code", "Figma"],
+    category: "API Development & Testing",
+    items: ["REST APIs", "Postman", "Swagger", "JSON"],
+  },
+  {
+    category: "Development Tools",
+    items: ["IntelliJ IDEA", "VS Code", "MySQL Workbench", "MongoDB Compass"],
+  },
+  {
+    category: "Concepts",
+    items: [
+      "Object-Oriented Programming (OOP)",
+      "Collections Framework",
+      "Exception Handling",
+      "Multithreading",
+      "Agile Methodology",
+      "SOLID Principles",
+    ],
+  },
+  {
+    category: "Currently Learning",
+    items: [
+      "Docker",
+      "Kubernetes",
+      "Apache Kafka",
+      "Redis",
+      "AWS",
+      "CI/CD Pipelines",
+    ],
   },
 ];
 
 export const experience = [
   {
-    role: "Full Stack Developer",
-    company: "Vitorscape Technologies",
+    role: "Java Full Stack Developer",
+    company: "Webxces Technologies",
     location: "Mumbai",
     locationType: "Onsite",
     duration: "June 2025 – Present",
     summary:
-      "Building and maintaining scalable SaaS web applications for HRMS, attendance tracking, approval workflows, and payroll operations across JRC and Haajri platforms serving enterprise clients. Architected a reusable component-driven UI library in React.js and Tailwind CSS, implemented Redux Toolkit with RTK Query for optimized API caching and backend-driven pagination, and built dynamic Chart.js dashboards for real-time analytics. Enforced application security via RBAC, JWT authentication, and client-side encryption, integrated AWS S3 and Lambda for cloud workflows, and improved performance through lazy loading and memoization.",
+      "Contributing to enterprise HRMS and workforce management applications by developing scalable full-stack solutions using Java, Spring Boot, React.js and SQL. Responsible for developing RESTful APIs, integrating frontend and backend systems, implementing secure authentication and authorization, optimizing application performance, and delivering business-critical modules including employee management, attendance, payroll, approvals, compliance, and reporting while following Agile development practices and clean coding standards.",
     tech: [
+      "Java",
+      "Spring Boot",
+      "Spring MVC",
+      "Hibernate/JPA",
       "React.js",
       "Redux Toolkit",
-      "RTK Query",
-      "Tailwind CSS",
-      "Node.js",
-      "Chart.js",
-      "AWS S3",
-      "AWS Lambda",
+      "React Hooks",
+      "REST APIs",
+      "MySQL",
+      "Git",
+      "Maven",
       "JWT",
       "RBAC",
     ],

@@ -14,9 +14,10 @@ export default function AboutSection() {
         <div className="about-heading-grid">
           <h2>Software developer building SaaS products.</h2>
           <p>
-            I build production-ready React and Node.js features across HRMS,
-            attendance, payroll, approval workflows, dashboards, and secure API
-            integrations.
+            I build production-ready enterprise applications using Java, Spring
+            Boot, and React.js with expertise in RESTful APIs, authentication,
+            HRMS, attendance, payroll, approval workflows, and dashboard
+            development.
           </p>
         </div>
       </header>

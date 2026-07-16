@@ -15,9 +15,9 @@ export default function TechStackSection() {
           <h2>Practical tools for shipping full-stack products.</h2>
 
           <p>
-            A focused stack around React interfaces, Redux data flows, Node.js
-            APIs, secure authentication, cloud integrations, and modern delivery
-            workflows.
+            A focused stack around React.js interfaces, Java Spring Boot APIs,
+            secure authentication, SQL databases, RESTful services, and modern
+            software development practices.
           </p>
         </div>
       </header>

@@ -14,7 +14,7 @@ export default function Preloader() {
 
   return (
     <div className="fixed inset-0 flex z-50">
-      {Array.from({ length: 10 }).map((_, i) => (
+      {Array.from({ length: 12 }).map((_, i) => (
         <div
           key={i}
           className="

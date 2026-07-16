@@ -4,7 +4,7 @@ import { stats, about } from "../data/Content/Content";
 import Resume from "../data/Resume/Gaurav_Singh.pdf";
 import ScrollToTop from "./ScrollToTop";
 import { HiArrowUpRight } from "react-icons/hi2";
-import { IoLocationOutline } from "react-icons/io5";
+import { SlLocationPin } from "react-icons/sl";
 
 const heroHighlights = [
   "React.js",
@@ -21,12 +21,12 @@ export default function HeroSection() {
       {about.map((profile) => (
         <section key={profile.name} className="hero-copy">
           <div className="hero-eyebrow">
-            <span>Full Stack Developer</span>
+            <span>Java Full Stack Developer</span>
 
             <span className="hero-eyebrow-divider" />
 
             <span className="hero-location">
-              <IoLocationOutline />
+              <SlLocationPin className="mb-[1px] text-sm" />
               Mumbai, India
             </span>
           </div>

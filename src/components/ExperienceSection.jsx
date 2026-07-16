@@ -38,9 +38,8 @@ export default function WorkExperience() {
                 <span>{job.company}</span>
 
                 <div className="experience-location">
-                  <IoLocationOutline />
-
-                  <span>
+                  <span className="experience-duration">
+                    <IoLocationOutline className="text-sm text-(--primary) mr-2" />
                     {job.locationType} • {job.location}
                   </span>
                 </div>

@@ -324,7 +324,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .portfolio-shell > main:first-of-type {
-  padding-top: 12rem;
+  padding-top: 9rem;
   padding-bottom: 4rem;
 }
 
@@ -964,12 +964,9 @@ section p {
 
 .about-profile-card h3 {
   margin-top: 0.75rem;
-
   color: var(--primary);
-
-  font-size: 1.05rem;
+  font-size: 0.99rem;
   font-weight: 800;
-
   line-height: 1.35;
 }
 
@@ -1257,6 +1254,7 @@ section p {
 .tech-grid {
   display: grid;
   gap: 1rem;
+
   margin-top: 2rem;
 }
 
@@ -1267,6 +1265,8 @@ section p {
 .tech-card {
   display: grid;
   gap: 1.25rem;
+
+  align-content: start;
 
   padding: 1.35rem;
 
@@ -1288,8 +1288,6 @@ section p {
 }
 
 .tech-card:hover {
-  transform: translateY(-2px);
-
   border-color: var(--border-strong);
 
   box-shadow: var(--shadow-md);
@@ -1343,6 +1341,9 @@ section p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
+
+  align-content: start;
+
   height: fit-content;
 }
 
@@ -1967,7 +1968,7 @@ section p {
 .project-detail {
   width: min(1100px, calc(100% - 3rem));
   margin-inline: auto;
-  padding-top: 8rem;
+  padding-top: 4rem;
   padding-bottom: 5rem;
 }
 
@@ -2151,7 +2152,7 @@ section p {
 
 .project-detail-list {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.2rem;
 
   list-style: none;
   padding: 0;
@@ -2282,7 +2283,7 @@ section p {
   }
 
   .project-detail-description {
-    max-width: 70rem;
+    max-width: fit-content;
   }
 
   .project-detail-image-wrapper {
@@ -2931,7 +2932,7 @@ section p {
   .experience-heading-grid,
   .projects-heading-grid,
   .contact-heading-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(22rem, 31rem);
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 34rem);
     align-items: center;
   }
 
@@ -2956,7 +2957,7 @@ section p {
   }
 
   .hero-description {
-    max-width: 42rem;
+    max-width: 50rem;
   }
 
   .hero-stats {
