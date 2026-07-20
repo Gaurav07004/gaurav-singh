@@ -39,10 +39,10 @@ export default function Projects() {
                 <div className="project-year">
                   <span>{project.year}</span>
 
-                  <HiArrowUpRight
+                  {/* <HiArrowUpRight
                     className="project-arrow"
                     aria-hidden="true"
-                  />
+                  /> */}
                 </div>
               </div>
 

@@ -28,7 +28,7 @@ export default function WorkExperience() {
             <div className="experience-top">
               <span className="experience-duration">{job.duration}</span>
 
-              <HiArrowUpRight className="experience-arrow" aria-hidden="true" />
+              {/* <HiArrowUpRight className="experience-arrow" aria-hidden="true" /> */}
             </div>
 
             <div className="experience-content">
@@ -38,8 +38,11 @@ export default function WorkExperience() {
                 <span>{job.company}</span>
 
                 <div className="experience-location">
-                  <span className="experience-duration">
+                  {/* <span className="experience-duration">
                     <IoLocationOutline className="text-sm text-(--primary) mr-2" />
+                    {job.locationType} • {job.location}
+                  </span> */}
+                  <span className="text-base text-(--primary)">
                     {job.locationType} • {job.location}
                   </span>
                 </div>

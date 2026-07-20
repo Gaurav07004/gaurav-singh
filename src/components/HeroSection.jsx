@@ -21,7 +21,7 @@ export default function HeroSection() {
       {about.map((profile) => (
         <section key={profile.name} className="hero-copy">
           <div className="hero-eyebrow">
-            <span>Full Stack Developer</span>
+            <span>Software Developer</span>
 
             <span className="hero-eyebrow-divider" />
 

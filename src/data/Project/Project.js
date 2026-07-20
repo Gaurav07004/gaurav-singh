@@ -14,7 +14,7 @@ const projects = [
 
     techAndTechnique: [
       "React.js",
-      "JavaScript (ES6+)",
+      "JavaScript",
       "HTML5",
       "CSS3",
       "Node.js",
@@ -24,17 +24,14 @@ const projects = [
       "JWT Authentication",
       "Authorization",
       "Protected Routes",
-      "Component-Based Architecture",
+      // "Component-Based Architecture",
       "Responsive Design",
-      "Form Validation",
       "API Integration",
-      "Async/Await",
       "Nodemailer",
       "Email Verification",
       "Password Recovery",
       "Git",
       "GitHub",
-      "Vercel",
     ],
 
     description:
@@ -89,15 +86,13 @@ const projects = [
       "MongoDB",
       "Next.js API Routes",
       "RESTful APIs",
-      "JWT Authentication",
       "Role-Based Access Control (RBAC)",
       "Chart.js",
+      "JWT Authentication",
       "Data Visualization",
-      "Component-Based Architecture",
       "Protected Routes",
       "Git",
       "GitHub",
-      "Vercel",
     ],
 
     description:
