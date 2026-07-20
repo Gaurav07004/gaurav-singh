@@ -1,6 +1,6 @@
 import { IoFlowerOutline } from "react-icons/io5";
 import { FaCode } from "react-icons/fa6";
-import { currentFocus, skills } from "../data/Content/Content";
+import { currentFocus, skills } from "../data/Content/Content-1";
 
 export default function TechStackSection() {
   return (

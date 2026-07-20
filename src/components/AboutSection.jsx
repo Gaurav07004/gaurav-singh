@@ -1,6 +1,6 @@
 import { IoFlowerOutline } from "react-icons/io5";
 import { HiArrowUpRight } from "react-icons/hi2";
-import { aboutParagraphs, coreProfile } from "../data/Content/Content";
+import { aboutParagraphs, coreProfile } from "../data/Content/Content-1";
 
 export default function AboutSection() {
   return (

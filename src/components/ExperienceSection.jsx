@@ -1,6 +1,6 @@
 import { IoFlowerOutline, IoLocationOutline } from "react-icons/io5";
 import { HiArrowUpRight } from "react-icons/hi2";
-import { experience } from "../data/Content/Content";
+import { experience } from "../data/Content/Content-1";
 
 export default function WorkExperience() {
   return (

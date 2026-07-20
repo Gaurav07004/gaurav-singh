@@ -1,7 +1,7 @@
 import ArrowAnimation from "./ArrowAnimation";
 import { NavLink } from "react-router-dom";
-import { stats, about } from "../data/Content/Content";
-import Resume from "../data/Resume/Gaurav_Singh.pdf";
+import { stats, about } from "../data/Content/Content-1";
+import Resume from "../data/Resume/Gaurav_Singh_1.pdf";
 import ScrollToTop from "./ScrollToTop";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { SlLocationPin } from "react-icons/sl";
@@ -21,7 +21,7 @@ export default function HeroSection() {
       {about.map((profile) => (
         <section key={profile.name} className="hero-copy">
           <div className="hero-eyebrow">
-            <span>Java Full Stack Developer</span>
+            <span>Full Stack Developer</span>
 
             <span className="hero-eyebrow-divider" />
 
