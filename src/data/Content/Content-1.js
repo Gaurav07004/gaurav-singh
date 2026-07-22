@@ -9,7 +9,7 @@ export const about = [
     name: "Gaurav Singh",
     designation: "Software Developer",
     about:
-      "I am a Software Developer with nearly 1.5+ years of experience building scalable SaaS and enterprise web applications using React.js, Next.js, Redux Toolkit, RTK Query, Node.js, Express.js, MongoDB, and REST APIs. I specialize in developing reusable components, integrating APIs, implementing secure authentication, and building responsive, high-performance user interfaces. Passionate about writing clean, maintainable code, I enjoy solving real-world problems, learning new technologies, and creating reliable software that delivers exceptional user experiences and business value.",
+      "I am a Software Developer with nearly 2+ years of experience building scalable SaaS and enterprise web applications using React.js, Next.js, Redux Toolkit, RTK Query, Node.js, Express.js, MongoDB, and REST APIs. I specialize in developing reusable components, integrating APIs, implementing secure authentication, and building responsive, high-performance user interfaces. Passionate about writing clean, maintainable code, I enjoy solving real-world problems, learning new technologies, and creating reliable software that delivers exceptional user experiences and business value.",
   },
 ];
 
@@ -91,7 +91,7 @@ export const experience = [
     company: "Webxces Technologies",
     location: "Mumbai",
     locationType: "Onsite",
-    duration: "Jan 2025 – Present",
+    duration: "July 2024 – Present",
     summary:
       "Built and maintained scalable SaaS web applications for HRMS, attendance management, approval workflows, and payroll operations serving enterprise customers. Architected a reusable component-based UI library using React.js and Tailwind CSS, implemented Redux Toolkit and RTK Query for efficient state management, API caching, and backend-driven pagination, and developed interactive Chart.js dashboards for real-time analytics. Strengthened application security through JWT authentication, Role-Based Access Control (RBAC), and client-side encryption, integrated AWS S3 and AWS Lambda for cloud-based workflows, and improved application performance using lazy loading, memoization, and rendering optimizations.",
     tech: [
