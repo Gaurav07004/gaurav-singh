@@ -5,7 +5,7 @@ import { RxCross1 } from "react-icons/rx";
 import { PiLinkedinLogoLight, PiGithubLogoLight } from "react-icons/pi";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { IoMailOutline } from "react-icons/io5";
-import Resume from "../data/Resume/Gaurav_Singh_1.pdf";
+import Resume from "../data/Resume/Gaurav_Singh_1+YOE.pdf";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
