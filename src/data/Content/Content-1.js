@@ -7,16 +7,18 @@ export const stats = [
 export const about = [
   {
     name: "Gaurav Singh",
-    designation: "Software Developer",
+    designation: "MERN Stack Developer",
     about:
-      "I am a Software Developer with nearly 1+ years of experience building scalable SaaS and enterprise web applications using React.js, Next.js, Redux Toolkit, RTK Query, Node.js, Express.js, MongoDB, and REST APIs. I specialize in developing reusable components, integrating APIs, implementing secure authentication, and building responsive, high-performance user interfaces. Passionate about writing clean, maintainable code, I enjoy solving real-world problems, learning new technologies, and creating reliable software that delivers exceptional user experiences and business value.",
+      "I am a MERN Stack Developer with 1+ year of experience building scalable SaaS and enterprise web applications using MongoDB, Express.js, React.js, Node.js, JavaScript, Redux Toolkit, and REST APIs. I specialize in developing responsive user interfaces, designing backend APIs, integrating databases, implementing JWT-based authentication, and optimizing application performance. Passionate about writing clean, maintainable code, I enjoy building end-to-end solutions and delivering reliable software that creates real business value.",
   },
 ];
 
 export const aboutParagraphs = [
-  "I am Gaurav Singh, a Software Developer at Webxces Technologies, building scalable SaaS and enterprise web applications using React.js, Next.js, Redux Toolkit, RTK Query, and Node.js. I graduated with a B.Tech in Internet of Things from Thakur College of Engineering and Technology, Mumbai, with a CGPA of 9.10.",
-  "Currently, I contribute to JRC and Haajri — HRMS platforms serving enterprise clients — delivering features across attendance management, approval workflows, payroll operations, and admin dashboards. I focus on component-driven architecture, optimized state management with RTK Query, secure authentication via RBAC and JWT, and cloud integrations using AWS S3 and Lambda.",
-  "Beyond my professional work, I have shipped full-stack projects including Next Boarding, a travel booking platform with real-time seat selection and JWT authentication, and Admin 360, a Next.js SSR admin dashboard with role-based access control and Chart.js visualizations. I enjoy working close to the product — owning features end-to-end, from API design to UI delivery.",
+  "I am Gaurav Singh, a MERN Stack Developer at Webxces Technologies, building scalable SaaS and enterprise web applications using MongoDB, Express.js, React.js, Node.js, Redux Toolkit, and AWS S3. I graduated with a B.Tech in Internet of Things from Thakur College of Engineering and Technology, Mumbai, with a CGPA of 9.10.",
+
+  "Currently, I contribute to enterprise HRMS platforms, delivering features across attendance management, approval workflows, payroll operations, and admin dashboards. I focus on building reusable components, developing RESTful APIs, implementing secure authentication with JWT and RBAC, integrating AWS S3 for file storage, and optimizing application performance.",
+
+  "Beyond my professional work, I have built full-stack projects including Next Boarding, a travel booking platform with real-time seat selection and JWT authentication, and Admin 360, an admin dashboard with role-based access control and Chart.js visualizations. I enjoy building end-to-end solutions, from backend API development and database design to creating responsive, user-friendly interfaces.",
 ];
 
 export const coreProfile = [
@@ -87,24 +89,26 @@ export const skills = [
 
 export const experience = [
   {
-    role: "Software Developer",
+    role: "MERN Stack Developer",
     company: "Webxces Technologies",
     location: "Mumbai",
     locationType: "Onsite",
     duration: "July 2025 – Present",
     summary:
-      "Built and maintained scalable SaaS web applications for HRMS, attendance management, approval workflows, and payroll operations serving enterprise customers. Architected a reusable component-based UI library using React.js and Tailwind CSS, implemented Redux Toolkit and RTK Query for efficient state management, API caching, and backend-driven pagination, and developed interactive Chart.js dashboards for real-time analytics. Strengthened application security through JWT authentication, Role-Based Access Control (RBAC), and client-side encryption, integrated AWS S3 and AWS Lambda for cloud-based workflows, and improved application performance using lazy loading, memoization, and rendering optimizations.",
+      "Developed and maintained scalable MERN Stack SaaS applications for HRMS, attendance management, payroll, and approval workflows. Built responsive and reusable user interfaces using React.js and Tailwind CSS, developed RESTful APIs with Node.js and Express.js, and integrated MongoDB for efficient data management. Implemented Redux Toolkit for state management, integrated REST APIs, and developed features including pagination, filtering, and real-time data updates. Integrated AWS S3 for secure file storage and document management. Enhanced application security with JWT authentication and Role-Based Access Control (RBAC), optimized performance using lazy loading and memoization, and collaborated with cross-functional teams in an Agile development environment.",
     tech: [
+      "MongoDB",
+      "Express.js",
       "React.js",
-      "Redux Toolkit",
-      "RTK Query",
-      "Tailwind CSS",
       "Node.js",
-      "Chart.js",
+      "Redux Toolkit",
+      "JavaScript",
+      "Tailwind CSS",
+      "REST APIs",
       "AWS S3",
-      "AWS Lambda",
       "JWT",
       "RBAC",
+      "Git",
     ],
   },
 ];
