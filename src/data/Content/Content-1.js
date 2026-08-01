@@ -7,14 +7,14 @@ export const stats = [
 export const about = [
   {
     name: "Gaurav Singh",
-    designation: "MERN Stack Developer",
+    designation: "Software Developer",
     about:
-      "I am a MERN Stack Developer with 1+ year of experience building scalable SaaS and enterprise web applications using MongoDB, Express.js, React.js, Node.js, JavaScript, Redux Toolkit, and REST APIs. I specialize in developing responsive user interfaces, designing backend APIs, integrating databases, implementing JWT-based authentication, and optimizing application performance. Passionate about writing clean, maintainable code, I enjoy building end-to-end solutions and delivering reliable software that creates real business value.",
+      "I am a Software Developer with 1+ year of experience building scalable SaaS and enterprise web applications using MongoDB, Express.js, React.js, Node.js, JavaScript, Redux Toolkit, and REST APIs. I specialize in developing responsive user interfaces, designing backend APIs, integrating databases, implementing JWT-based authentication, and optimizing application performance. Passionate about writing clean, maintainable code, I enjoy building end-to-end solutions and delivering reliable software that creates real business value.",
   },
 ];
 
 export const aboutParagraphs = [
-  "I am Gaurav Singh, a MERN Stack Developer at Webxces Technologies, building scalable SaaS and enterprise web applications using MongoDB, Express.js, React.js, Node.js, Redux Toolkit, and AWS S3. I graduated with a B.Tech in Internet of Things from Thakur College of Engineering and Technology, Mumbai, with a CGPA of 9.10.",
+  "I am Gaurav Singh, a Software Developer at Webxces Technologies, building scalable SaaS and enterprise web applications using MongoDB, Express.js, React.js, Node.js, Redux Toolkit, and AWS S3. I graduated with a B.Tech in Internet of Things from Thakur College of Engineering and Technology, Mumbai, with a CGPA of 9.10.",
 
   "Currently, I contribute to enterprise HRMS platforms, delivering features across attendance management, approval workflows, payroll operations, and admin dashboards. I focus on building reusable components, developing RESTful APIs, implementing secure authentication with JWT and RBAC, integrating AWS S3 for file storage, and optimizing application performance.",
 
@@ -89,7 +89,7 @@ export const skills = [
 
 export const experience = [
   {
-    role: "MERN Stack Developer",
+    role: "Software Developer",
     company: "Webxces Technologies",
     location: "Mumbai",
     locationType: "Onsite",
