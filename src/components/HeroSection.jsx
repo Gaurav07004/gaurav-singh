@@ -1,6 +1,6 @@
 import ArrowAnimation from "./ArrowAnimation";
 import { NavLink } from "react-router-dom";
-import { stats, about } from "../data/Content/Content-1";
+import { heroStatistics, heroProfile } from "../data/Content/Content-1";
 import Resume from "../data/Resume/Gaurav_Singh_1+YOE.pdf";
 import ScrollToTop from "./ScrollToTop";
 import { HiArrowUpRight } from "react-icons/hi2";
@@ -18,7 +18,7 @@ const heroHighlights = [
 export default function HeroSection() {
   return (
     <main id="Home" className="hero-section">
-      {about.map((profile) => (
+      {heroProfile.map((profile) => (
         <section key={profile.name} className="hero-copy">
           <div className="hero-eyebrow">
             <span>Software Developer</span>
@@ -60,7 +60,7 @@ export default function HeroSection() {
       ))}
 
       <aside className="hero-stats">
-        {stats.map((item) => (
+        {heroStatistics.map((item) => (
           <article key={item.label} className="hero-stat-card">
             <h3 className="hero-stat-value">
               {item.value}

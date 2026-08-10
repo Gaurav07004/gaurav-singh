@@ -1,6 +1,6 @@
 import { IoFlowerOutline, IoLocationOutline } from "react-icons/io5";
 import { HiArrowUpRight } from "react-icons/hi2";
-import { experience } from "../data/Content/Content-1";
+import { professionalExperience } from "../data/Content/Content-1";
 
 export default function WorkExperience() {
   return (
@@ -20,38 +20,34 @@ export default function WorkExperience() {
       </header>
 
       <div className="experience-list">
-        {experience.map((job) => (
+        {professionalExperience.map((job) => (
           <article
-            key={`${job.company}-${job.role}`}
+            key={`${job.company}-${job.position}`}
             className="experience-card"
           >
             <div className="experience-top">
-              <span className="experience-duration">{job.duration}</span>
-
-              {/* <HiArrowUpRight className="experience-arrow" aria-hidden="true" /> */}
+              <span className="experience-duration">
+                {job.employmentPeriod}
+              </span>
             </div>
 
             <div className="experience-content">
-              <h3>{job.role}</h3>
+              <h3>{job.position}</h3>
 
               <div className="experience-company">
                 <span>{job.company}</span>
 
                 <div className="experience-location">
-                  {/* <span className="experience-duration">
-                    <IoLocationOutline className="text-sm text-(--primary) mr-2" />
-                    {job.locationType} • {job.location}
-                  </span> */}
                   <span className="text-base text-(--primary)">
-                    {job.locationType} • {job.location}
+                    {job.workMode} • {job.location}
                   </span>
                 </div>
               </div>
 
-              <p className="experience-summary">{job.summary}</p>
+              <p className="experience-summary">{job.description}</p>
 
               <div className="experience-tech">
-                {job.tech.map((tech) => (
+                {job.technologies.map((tech) => (
                   <span key={tech}>{tech}</span>
                 ))}
               </div>

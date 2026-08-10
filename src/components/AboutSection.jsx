@@ -1,6 +1,11 @@
 import { IoFlowerOutline } from "react-icons/io5";
 import { HiArrowUpRight } from "react-icons/hi2";
-import { aboutParagraphs, coreProfile } from "../data/Content/Content-1";
+import {
+  aboutHeader,
+  aboutHeaderParagraph,
+  aboutParagraphs,
+  coreProfile,
+} from "../data/Content/Content-1";
 
 export default function AboutSection() {
   return (
@@ -12,13 +17,8 @@ export default function AboutSection() {
         </div>
 
         <div className="about-heading-grid">
-          <h2>Software developer building SaaS products.</h2>
-          <p>
-            I build production-ready enterprise applications using Java, Spring
-            Boot, and React.js with expertise in RESTful APIs, authentication,
-            HRMS, attendance, payroll, approval workflows, and dashboard
-            development.
-          </p>
+          <h2>{aboutHeader}</h2>
+          <p>{aboutHeaderParagraph}</p>
         </div>
       </header>
 

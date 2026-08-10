@@ -291,7 +291,7 @@ body::-webkit-scrollbar-thumb:hover {
 
   pointer-events: none;
 
-  border: 1px solid rgba(167, 15, 27, 0.12);
+  border: 1px solid var(--border);
 
   transform: rotate(18deg);
 }
@@ -343,7 +343,7 @@ section[id] {
 nav.fixed {
   background: rgba(255, 248, 239, 0.86);
 
-  border-bottom: 1px solid rgba(167, 15, 27, 0.12);
+  border-bottom: 1px solid var(--border);
 
   box-shadow: 0 12px 34px rgba(81, 23, 17, 0.07);
 
@@ -653,7 +653,7 @@ section p {
   justify-content: center;
   gap: 0.6rem;
 
-  padding: 0.85rem 1.3rem;
+  padding: 0.8rem 1.6rem;
 
   border: 1px solid var(--primary);
   border-radius: var(--radius);
@@ -1929,7 +1929,7 @@ section p {
 
   margin-top: 0.5rem;
 
-  padding: 10px 20px;
+  padding: 0.8rem 1.6rem;
 
   border: 1px solid var(--primary);
   border-radius: var(--radius);

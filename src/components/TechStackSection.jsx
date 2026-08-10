@@ -1,10 +1,10 @@
 import { IoFlowerOutline } from "react-icons/io5";
 import { FaCode } from "react-icons/fa6";
-import { currentFocus, skills } from "../data/Content/Content-1";
+import { currentFocus, technicalSkills } from "../data/Content/Content-1";
 
 export default function TechStackSection() {
   return (
-    <section id="Tech-Stack" className="tech-section font-[Quicksand]">
+    <section className="tech-section">
       <header className="tech-header">
         <div className="tech-kicker">
           <IoFlowerOutline className="text-xl text-(--primary) slow-spin" />
@@ -12,12 +12,13 @@ export default function TechStackSection() {
         </div>
 
         <div className="tech-heading-grid">
-          <h2>Practical tools for shipping full-stack products.</h2>
+          <h2>Practical tools for building scalable full-stack products.</h2>
 
           <p>
-            A focused stack around React.js interfaces, Java Spring Boot APIs,
-            secure authentication, SQL databases, RESTful services, and modern
-            software development practices.
+            A focused technology stack centered around React.js interfaces,
+            Node.js and Express.js APIs, MongoDB databases, secure
+            authentication, RESTful services, and modern software development
+            practices.
           </p>
         </div>
       </header>
@@ -26,7 +27,9 @@ export default function TechStackSection() {
         <div>
           <p className="tech-section-label">Currently Strengthening</p>
 
-          <h3>Improving the stack I use for scalable product work.</h3>
+          <h3>
+            Expanding the technologies I use for scalable product development.
+          </h3>
         </div>
 
         <div className="tech-focus-list">
@@ -37,7 +40,7 @@ export default function TechStackSection() {
       </section>
 
       <section className="tech-grid">
-        {skills.map((group) => (
+        {technicalSkills.map((group) => (
           <article key={group.category} className="tech-card">
             <div className="tech-card-header">
               <div className="tech-card-icon">
@@ -48,7 +51,7 @@ export default function TechStackSection() {
             </div>
 
             <div className="tech-skill-list">
-              {group.items.map((skill) => (
+              {group.technologies.map((skill) => (
                 <span key={skill}>{skill}</span>
               ))}
             </div>
