@@ -4,7 +4,7 @@ import { currentFocus, technicalSkills } from "../data/Content/Content-1";
 
 export default function TechStackSection() {
   return (
-    <section className="tech-section">
+    <section id="Tech-Stack" className="tech-section">
       <header className="tech-header">
         <div className="tech-kicker">
           <IoFlowerOutline className="text-xl text-(--primary) slow-spin" />

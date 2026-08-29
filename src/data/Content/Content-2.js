@@ -15,7 +15,7 @@ export const about = [
 
 export const aboutParagraphs = [
   "I am Gaurav Singh, a Java Full Stack Developer with experience in building scalable and responsive enterprise web applications. I hold a B.Tech in Computer Engineering from Thakur College of Engineering and Technology, Mumbai, graduating with a CGPA of 9.10.",
-  "I have contributed to enterprise HRMS and workforce management applications by developing business-critical modules including employee management, attendance, payroll, approvals, compliance, and reporting. My work involves building responsive user interfaces with React.js, developing RESTful APIs with Spring Boot, integrating databases, implementing secure authentication and authorization, and optimizing application performance while following clean coding standards and Agile development practices.",
+  "I have contributed to enterprise workforce management system and workforce management applications by developing business-critical modules including employee management, attendance, payroll, approvals, compliance, and reporting. My work involves building responsive user interfaces with React.js, developing RESTful APIs with Spring Boot, integrating databases, implementing secure authentication and authorization, and optimizing application performance while following clean coding standards and Agile development practices.",
   "I enjoy solving complex business problems through technology and continuously expanding my expertise in Java, Spring Boot, Microservices, SQL optimization, system design, cloud technologies, and modern software architecture. My goal is to build scalable, high-performance applications that deliver real business value.",
 ];
 
@@ -119,12 +119,12 @@ export const skills = [
 export const experience = [
   {
     role: "Java Full Stack Developer",
-    company: "Webxces Technologies",
+    company: "Vitorscape Technologies",
     location: "Mumbai",
     locationType: "Onsite",
     duration: "January 2025 – Present",
     summary:
-      "Contributing to enterprise HRMS and workforce management applications by developing scalable full-stack solutions using Java, Spring Boot, React.js and SQL. Responsible for developing RESTful APIs, integrating frontend and backend systems, implementing secure authentication and authorization, optimizing application performance, and delivering business-critical modules including employee management, attendance, payroll, approvals, compliance, and reporting while following Agile development practices and clean coding standards.",
+      "Contributing to enterprise workforce management system and workforce management applications by developing scalable full-stack solutions using Java, Spring Boot, React.js and SQL. Responsible for developing RESTful APIs, integrating frontend and backend systems, implementing secure authentication and authorization, optimizing application performance, and delivering business-critical modules including employee management, attendance, payroll, approvals, compliance, and reporting while following Agile development practices and clean coding standards.",
     tech: [
       "Java",
       "Spring Boot",
