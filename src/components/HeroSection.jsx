@@ -1,7 +1,7 @@
 import ArrowAnimation from "./ArrowAnimation";
 import { NavLink } from "react-router-dom";
 import { heroStatistics, heroProfile } from "../data/Content/Content-1";
-import Resume from "../data/Resume/Gaurav_Singh_1+YOE.pdf";
+import Resume from "../data/Resume/Gaurav_Singh_Full_Stack_Developer.pdf";
 import ScrollToTop from "./ScrollToTop";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { SlLocationPin } from "react-icons/sl";
