@@ -137,7 +137,7 @@ export const professionalExperience = [
     company: "Vitorscape Technologies",
     location: "Mumbai",
     workMode: "On-site",
-    employmentPeriod: "Feb 2026 – Present",
+    employmentPeriod: "June 2025 – Present",
 
     description:
       "Developed and maintained scalable MERN stack SaaS applications for workforce management system, attendance management, payroll, and approval workflows. Built responsive and reusable user interfaces using React.js and Tailwind CSS. Developed RESTful APIs using Node.js and Express.js and integrated MongoDB for efficient data management. Implemented Redux Toolkit for centralized state management and integrated RESTful services across application modules. Developed features including pagination, filtering, search functionality, and real-time data updates. Integrated AWS S3 for secure file storage and document management. Strengthened application security through JWT authentication and Role-Based Access Control. Improved application performance through lazy loading, memoization, and reusable component architecture. Collaborated with cross-functional teams following Agile development practices.",
