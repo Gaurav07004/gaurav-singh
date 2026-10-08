@@ -1,0 +1,158 @@
+/* ==========================================================
+   Experience section — company cards and roles
+   Uses design tokens from styles/variables.css
+========================================================== */
+
+.experience-section {
+  position: relative;
+}
+
+.experience-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.experience-card {
+  display: grid;
+  gap: 1.4rem;
+  padding: 1.4rem;
+}
+
+.experience-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experience-duration {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255, 252, 247, 0.84);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  box-shadow: var(--shadow-sm);
+}
+
+.experience-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-content h3 {
+  color: var(--secondary);
+  font-size: clamp(1.2rem, 1vw, 1.7rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.experience-company {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.experience-company > span {
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.experience-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--secondary-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.experience-location svg {
+  color: var(--primary);
+}
+
+.experience-summary {
+  color: var(--secondary-light);
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+.experience-role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.experience-role-period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.experience-role + .experience-role {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px dashed color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+@media (max-width: 768px) {
+  .experience-company {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .experience-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
+
+.experience-list > *,
+.experience-card > *,
+.experience-content > * {
+  min-width: 0;
+}
+
+.experience-top {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.experience-content h3,
+.experience-summary,
+.experience-company > span {
+  overflow-wrap: anywhere;
+}
+
+.experience-duration {
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .experience-duration {
+    font-size: 0.72rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .experience-role-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

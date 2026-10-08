@@ -1,10 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-createRoot(document.getElementById('root')).render(
+// Global styles (order matters: tokens -> base -> animations)
+import "./styles/variables.css";
+import "./styles/globals.css";
+import "./styles/animations.css";
+
+import App from "./App.jsx";
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
   </StrictMode>,
-)
+);

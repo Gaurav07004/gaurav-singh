@@ -1,0 +1,76 @@
+/* Shared technology / skill pills — sizes: --sm --md --lg | --accent */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-content: start;
+  height: fit-content;
+}
+
+.tag {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: var(--transition-interactive);
+}
+
+/* Sizes */
+.tag-list--sm {
+  gap: 0.3rem;
+}
+
+.tag-list--sm .tag {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+}
+
+.tag-list--md {
+  gap: 0.5rem;
+}
+
+.tag-list--md .tag {
+  font-size: 0.75rem;
+}
+
+/* Accent (red outline) */
+.tag-list--accent .tag {
+  padding: 0.55rem 0.72rem;
+  border-color: var(--border-strong);
+  color: var(--primary);
+}
+
+.tag-list .tag:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+@media (max-width: 480px) {
+  .tag-list .tag {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.72rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tag {
+    transition: none !important;
+  }
+}
+
+/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
+
+.tag-list {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tag {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}

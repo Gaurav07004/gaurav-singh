@@ -1,0 +1,73 @@
+/* ==========================================================
+   DESIGN TOKENS — change a value here, the whole site follows.
+========================================================== */
+
+:root {
+  /* Brand colors */
+  --primary: #a70f1b;
+  --primary-light: #d72232;
+  --primary-dark: #720912;
+  --white: #fff;
+
+  /* Text colors */
+  --secondary: #211817;
+  --secondary-light: #211817;
+
+  /* Background colors */
+  --bg-dark: #fff8ef;
+  --bg-darker: #f5eadb;
+  --card: rgba(255, 252, 247, 0.94);
+  --chip: #fbf1e6;
+  --badge: #fff6ee;
+  --surface: rgba(255, 252, 247, 0.8);
+  --surface-soft: rgba(255, 252, 247, 0.72);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-light)
+  );
+  --gradient-card: linear-gradient(
+    145deg,
+    rgba(255, 252, 247, 0.96),
+    rgba(249, 239, 227, 0.9)
+  );
+
+  /* Borders */
+  --border: rgba(167, 15, 27, 0.18);
+  --border-strong: rgba(167, 15, 27, 0.34);
+
+  /* Shadows */
+  --shadow-sm: 0 8px 24px rgba(81, 23, 17, 0.08);
+  --shadow-md: 0 18px 48px rgba(81, 23, 17, 0.12);
+  --shadow-primary: 0 12px 28px rgba(167, 15, 27, 0.18);
+
+  /* Border radius */
+  --radius: 6px;
+
+  /* Typography */
+  --font-primary:
+    "Quicksand", Inter, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Anton", Impact, sans-serif;
+
+  /* Motion */
+  --transition-fast: 220ms ease;
+  --transition-base: 240ms ease;
+  --transition-interactive:
+    transform 240ms ease, background 240ms ease, color 240ms ease,
+    border-color 240ms ease, box-shadow 240ms ease, opacity 240ms ease;
+
+  /* Layout */
+  --container-max: 1280px;
+  --container-gutter: 3rem;
+  --anchor-offset: 6rem;
+
+  /* Browser settings */
+  color-scheme: light;
+
+  /* Breakpoints (media queries cannot read variables, so they are
+     written literally across the CSS files):
+       laptop  <= 1100px   tablet <= 768px   mobile <= 480px
+       desktop >= 1280px */
+}

@@ -1,19 +1,37 @@
-import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { HiOutlineArrowLeft } from "react-icons/hi";
-import { HiArrowUpRight } from "react-icons/hi2";
 import { RiArrowRightSLine } from "react-icons/ri";
+import projects from "../data/projects";
+import useScrollToTopOnMount from "../hooks/useScrollToTopOnMount";
+import Button, { ButtonGroup } from "../components/common/Button";
+import TagList from "../components/common/TagList";
+import "./ProjectDetails.css";
 
-import projects from "../data/Project/Project";
+// Heading + children, repeated for every block of the page.
+function DetailSection({ title, children }) {
+  return (
+    <section className="project-detail-section">
+      <h2 className="project-detail-heading">{title}</h2>
+      {children}
+    </section>
+  );
+}
+
+function DetailList({ items }) {
+  return (
+    <ul className="project-detail-list">
+      {items.map((item) => (
+        <li key={item} className="project-detail-item">
+          <RiArrowRightSLine />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function ProjectDetails() {
-  useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    window.scrollTo(0, 0);
-  }, []);
+  useScrollToTopOnMount();
 
   const { id } = useParams();
   const project = projects.find((item) => item.id === id);
@@ -37,7 +55,6 @@ export default function ProjectDetails() {
         <div className="project-detail-top">
           <div>
             <p className="project-detail-type">{project.type}</p>
-
             <h1 className="project-detail-title">{project.name}</h1>
           </div>
 
@@ -55,64 +72,31 @@ export default function ProjectDetails() {
         />
       </div>
 
-      <section className="project-detail-section">
-        <h2 className="project-detail-heading">Technologies Used</h2>
+      <DetailSection title="Technologies Used">
+        <TagList
+          items={project.techAndTechnique}
+          size="lg"
+          className="project-detail-tech"
+        />
+      </DetailSection>
 
-        <div className="project-detail-tech">
-          {project.techAndTechnique.map((tech) => (
-            <span key={tech}>{tech}</span>
-          ))}
-        </div>
-      </section>
+      <DetailSection title="Key Features">
+        <DetailList items={project.keyFeatures} />
+      </DetailSection>
 
-      <section className="project-detail-section">
-        <h2 className="project-detail-heading">Key Features</h2>
+      <DetailSection title="Technical Highlights">
+        <DetailList items={project.technicalHighlights} />
+      </DetailSection>
 
-        <ul className="project-detail-list">
-          {project.keyFeatures.map((feature) => (
-            <li key={feature} className="project-detail-item">
-              <RiArrowRightSLine />
-
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="project-detail-section">
-        <h2 className="project-detail-heading">Technical Highlights</h2>
-
-        <ul className="project-detail-list">
-          {project.technicalHighlights.map((item) => (
-            <li key={item} className="project-detail-item">
-              <RiArrowRightSLine />
-
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="project-detail-actions">
-        <Link
-          to={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-detail-button"
-        >
+      <ButtonGroup className="project-detail-actions">
+        <Button href={project.demo} arrow newTab>
           Live Demo
-          <HiArrowUpRight />
-        </Link>
+        </Button>
 
-        <Link
-          to={project.gitHub}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-detail-button secondary"
-        >
+        <Button href={project.gitHub} variant="secondary" newTab>
           Source Code
-        </Link>
-      </section>
+        </Button>
+      </ButtonGroup>
     </section>
   );
 }

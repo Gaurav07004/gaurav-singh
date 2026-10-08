@@ -1,0 +1,127 @@
+/* ==========================================================
+   About section — story card + profile cards
+   Uses design tokens from styles/variables.css
+========================================================== */
+
+.about-section {
+  position: relative;
+}
+
+.about-story-label {
+  color: var(--primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-layout {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.about-story {
+  padding: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.about-story-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-paragraphs {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.about-paragraphs p {
+  color: var(--secondary-light);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+.about-profile-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-profile-card {
+  padding: 1.25rem;
+}
+
+.about-profile-card p {
+  color: var(--secondary-light);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-profile-card h3 {
+  margin-top: 0.75rem;
+  color: var(--primary);
+  font-size: 0.99rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+@media (min-width: 1280px) {
+  .about-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-story,
+  .about-profile-card {
+    padding: 1rem;
+  }
+}
+
+/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
+
+.about-layout > *,
+.about-profile-grid > * {
+  min-width: 0;
+}
+
+@media (min-width: 1280px) {
+  .about-layout {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
+
+.about-paragraphs p,
+.about-profile-card h3 {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 360px) {
+  .about-story-label {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .about-profile-card p {
+    letter-spacing: 0.08em;
+  }
+}

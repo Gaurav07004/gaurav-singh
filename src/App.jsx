@@ -1,6 +1,8 @@
 import { useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
-import AppRouter from "./router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import ProjectDetails from "./pages/ProjectDetails";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   useEffect(() => {
@@ -10,7 +12,11 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <AppRouter />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:id" element={<ProjectDetails />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 }

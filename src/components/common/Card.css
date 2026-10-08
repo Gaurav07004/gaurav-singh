@@ -1,0 +1,31 @@
+/* Shared card surface — add --hover for the lift effect */
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--gradient-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.card--hover {
+  transition: var(--transition-interactive);
+}
+
+.card--hover:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--hover {
+    transition: none !important;
+  }
+}
+
+/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
+
+.card {
+  min-width: 0;
+  max-width: 100%;
+}

@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+/* ==========================================================
+   Global styles — reset, base, page shell
+   Reset, base, page shell and global overrides.
+   Uses design tokens from styles/variables.css
+========================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  font-family: var(--font-primary);
+  color: var(--secondary);
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(215, 34, 50, 0.12),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 95% 12%,
+      rgba(167, 15, 27, 0.08),
+      transparent 24rem
+    ),
+    linear-gradient(135deg, #fffaf3 0%, #fbefe2 48%, #fff8ef 100%);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(120, 110, 100, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 110, 100, 0.12) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: var(--white);
+  background: rgba(167, 15, 27, 0.82);
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(167, 15, 27, 0.38);
+  border: 3px solid var(--bg-dark);
+  border-radius: var(--radius);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 15, 27, 0.55);
+}
+
+.portfolio-shell {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.portfolio-shell::before,
+.portfolio-shell::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: 28rem;
+  height: 28rem;
+  pointer-events: none;
+  border: 1px solid var(--border);
+  transform: rotate(18deg);
+}
+
+.portfolio-shell::before {
+  top: 6rem;
+  left: -18rem;
+  background: rgba(255, 252, 247, 0.42);
+}
+
+.portfolio-shell::after {
+  right: -19rem;
+  bottom: 4rem;
+  background: rgba(167, 15, 27, 0.05);
+}
+
+.portfolio-shell > main,
+.portfolio-shell > section {
+  width: min(var(--container-max), calc(100% - var(--container-gutter)));
+  margin-inline: auto;
+  padding-block: 4rem;
+}
+
+.portfolio-shell > main:first-of-type {
+  padding-top: 9rem;
+  padding-bottom: 4rem;
+}
+
+section[id] {
+  scroll-margin-top: var(--anchor-offset);
+}
+
+img.rounded {
+  border-radius: var(--radius) !important;
+}
+
+a[class*="border-(--primary)"],
+button[class*="border-(--primary)"] {
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  transition:
+    background 240ms ease,
+    color 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+a[class*="border-(--primary)"]:hover,
+button[class*="border-(--primary)"]:hover {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-light)
+  ) !important;
+  color: var(--white) !important;
+  box-shadow: 0 14px 30px rgba(167, 15, 27, 0.22);
+}
+
+section p {
+  text-align: justify;
+}
+
+.rounded,
+.rounded-md,
+.rounded-lg,
+.rounded-xl,
+.rounded-2xl,
+.rounded-3xl,
+.rounded-full {
+  border-radius: var(--radius) !important;
+}
+
+.bg-\(--card\),
+.bg-\(--chip\) {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 252, 247, 0.96),
+    rgba(249, 239, 227, 0.92)
+  ) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.bg-\(--card\):hover,
+.bg-\(--chip\):hover {
+  box-shadow: var(--shadow-md);
+}
+
+.border-\(--border\) {
+  border-color: var(--border) !important;
+}

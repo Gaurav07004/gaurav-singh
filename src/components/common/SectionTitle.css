@@ -1,0 +1,95 @@
+/* Shared section heading: kicker + title (+ paragraph) */
+
+.section-title {
+  display: block;
+}
+
+.section-title__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: fit-content;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+  box-shadow: var(--shadow-sm);
+  color: var(--primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-title__body {
+  display: block;
+  margin-top: 1.25rem;
+}
+
+.section-title__body h2 {
+  max-width: 40ch;
+  color: var(--primary);
+  font-size: clamp(1rem, 2vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.section-title__body p {
+  max-width: 38rem;
+  margin-top: 1rem;
+  color: var(--secondary-light);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* Wide variant */
+@media (min-width: 769px) {
+  .section-title--wide .section-title__body h2 {
+    max-width: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-title__body p {
+    flex: 0 1 34rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .section-title__body {
+    margin-top: 1rem;
+  }
+
+  .section-title__body h2 {
+    font-size: clamp(1.2rem, 2vw, 3.75rem);
+  }
+
+  .section-title__body p {
+    max-width: 100%;
+    margin-top: 0.75rem;
+  }
+}
+
+/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
+
+.section-title__kicker {
+  max-width: 100%;
+}
+
+.section-title__body h2,
+.section-title__body p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 360px) {
+  .section-title__kicker {
+    letter-spacing: 0.08em;
+  }
+}

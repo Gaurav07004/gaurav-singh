@@ -1,0 +1,117 @@
+/* Shared button — variants: --secondary | sizes: --sm --md --lg */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition-interactive);
+}
+
+.btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover {
+  background: var(--gradient-primary);
+  border-color: var(--primary-light);
+  color: var(--white);
+  box-shadow: var(--shadow-primary);
+}
+
+.btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* Sizes */
+.btn--sm {
+  width: fit-content;
+  padding: 0.6rem 1.4rem;
+}
+
+.btn--md {
+  width: fit-content;
+  padding: 10px 20px;
+}
+
+.btn--lg {
+  padding: 0.8rem 1.6rem;
+}
+
+/* Secondary (neutral) */
+.btn--secondary {
+  border-color: var(--border);
+  color: var(--secondary);
+}
+
+.btn--secondary:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--white);
+  box-shadow: none;
+}
+
+/* Row of buttons */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.85rem 1rem;
+    font-size: 0.74rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn svg {
+    transition: none !important;
+  }
+
+  .btn:hover svg {
+    transform: none;
+  }
+}
+
+/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
+
+.btn {
+  max-width: 100%;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.btn svg {
+  flex: none;
+}
+
+.btn-group > * {
+  min-width: 0;
+}
+
+@media (max-width: 360px) {
+  .btn {
+    letter-spacing: 0.05em;
+  }
+}

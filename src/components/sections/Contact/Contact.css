@@ -1,0 +1,87 @@
+/* ==========================================================
+   Contact section — availability card
+   Uses design tokens from styles/variables.css
+========================================================== */
+
+.contact-section {
+  position: relative;
+}
+
+.contact-card {
+  margin-top: 2rem;
+}
+
+.contact-content {
+  display: grid;
+  gap: 1.25rem;
+  padding: 2rem;
+}
+
+.contact-label {
+  width: fit-content;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-content h3 {
+  color: var(--secondary);
+  font-size: clamp(1.35rem, 1vw, 2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.contact-description {
+  color: var(--secondary-light);
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+.contact-actions {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 1280px) {
+  .contact-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-content {
+    padding: 1rem;
+  }
+
+  .contact-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
+
+.contact-content > * {
+  min-width: 0;
+}
+
+.contact-label {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.contact-content h3,
+.contact-description {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 360px) {
+  .contact-label {
+    letter-spacing: 0.08em;
+  }
+}
