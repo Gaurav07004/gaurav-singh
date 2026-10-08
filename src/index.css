@@ -1,127 +1,73 @@
 /* ==========================================================
-   01. IMPORTS
-   ----------------------------------------------------------
-   External fonts and framework imports
+   01. IMPORTS — External fonts and framework imports
 ========================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 /* ==========================================================
-   02. CSS VARIABLES
-   ----------------------------------------------------------
-   Global Design System
-   - Colors
-   - Typography
-   - Shadows
-   - Borders
-   - Radius
+   02. CSS VARIABLES — Colors, typography, shadows, borders, radius
 ========================================================== */
 
 :root {
-  /* ========================================================
-     Brand Colors
-  ======================================================== */
-
+  /* Brand colors */
   --primary: #a70f1b;
   --primary-light: #d72232;
   --primary-dark: #720912;
 
-  /* ========================================================
-     Text Colors
-  ======================================================== */
-
+  /* Text colors */
   --secondary: #211817;
   --secondary-light: #211817;
 
-  /* ========================================================
-     Background Colors
-  ======================================================== */
-
+  /* Background colors */
   --bg-dark: #fff8ef;
   --bg-darker: #f5eadb;
-
   --card: rgba(255, 252, 247, 0.94);
   --chip: #fbf1e6;
   --badge: #fff6ee;
 
-  /* ========================================================
-     Borders
-  ======================================================== */
-
+  /* Borders */
   --border: rgba(167, 15, 27, 0.18);
   --border-strong: rgba(167, 15, 27, 0.34);
 
-  /* ========================================================
-     Shadows
-  ======================================================== */
-
+  /* Shadows */
   --shadow-sm: 0 8px 24px rgba(81, 23, 17, 0.08);
   --shadow-md: 0 18px 48px rgba(81, 23, 17, 0.12);
 
-  /* ========================================================
-     Border Radius
-  ======================================================== */
-
+  /* Border radius */
   --radius: 6px;
 
-  /* ========================================================
-     Typography
-  ======================================================== */
-
+  /* Typography */
   --font-primary:
     "Quicksand", Inter, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
-
   --font-display: "Anton", Impact, sans-serif;
 
-  /* ========================================================
-     Browser Settings
-  ======================================================== */
-
+  /* Browser settings */
   color-scheme: light;
 }
 
 /* ==========================================================
-   03. RESET
-   ----------------------------------------------------------
-   Base Reset
-   - Box Sizing
-   - HTML & Body
-   - Images
-   - Links
-   - Buttons
-   - Selection
+   03. RESET — Box sizing, html, body, media, links, buttons, selection
 ========================================================== */
 
-/* ==========================================================
-   Box Sizing
-========================================================== */
-
+/* Box sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* ==========================================================
-   HTML
-========================================================== */
-
+/* HTML */
 html {
   scroll-behavior: smooth;
 }
 
-/* ==========================================================
-   Body
-========================================================== */
-
+/* Body */
 body {
   min-width: 320px;
   margin: 0;
-
   font-family: var(--font-primary);
   color: var(--secondary);
-
   background:
     radial-gradient(
       circle at 10% 0%,
@@ -134,192 +80,120 @@ body {
       transparent 24rem
     ),
     linear-gradient(135deg, #fffaf3 0%, #fbefe2 48%, #fff8ef 100%);
-
   overflow-x: hidden;
-
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+/* Body grid overlay */
 body::before {
   content: "";
-
   position: fixed;
   inset: 0;
   z-index: -1;
-
   pointer-events: none;
-
   background-image:
     linear-gradient(rgba(120, 110, 100, 0.12) 1px, transparent 1px),
     linear-gradient(90deg, rgba(120, 110, 100, 0.12) 1px, transparent 1px);
-
   background-size: 72px 72px;
-
   mask-image: linear-gradient(to bottom, black, transparent 72%);
 }
 
-/* ==========================================================
-   Root Container
-========================================================== */
-
+/* Root container */
 #root {
   width: 100%;
   min-height: 100vh;
 }
 
-/* ==========================================================
-   Images
-========================================================== */
-
+/* Images */
 img {
   display: block;
   max-width: 100%;
 }
 
-/* ==========================================================
-   Links
-========================================================== */
-
+/* Links */
 a {
   color: inherit;
   text-decoration: none;
-
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ==========================================================
-   Buttons
-========================================================== */
-
+/* Buttons */
 button {
   cursor: pointer;
-
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ==========================================================
-   Text Selection
-========================================================== */
-
+/* Text selection */
 ::selection {
   color: #fff;
   background: rgba(167, 15, 27, 0.82);
 }
 
 /* ==========================================================
-   04. SCROLLBAR
-   ----------------------------------------------------------
-   Custom Scrollbar Styling
-   - Track
-   - Thumb
-========================================================== */
-
-/* ==========================================================
-   Scrollbar
+   04. SCROLLBAR — Track and thumb styling
 ========================================================== */
 
 body::-webkit-scrollbar {
   width: 10px;
 }
 
-/* ==========================================================
-   Scrollbar Track
-========================================================== */
-
 body::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* ==========================================================
-   Scrollbar Thumb
-========================================================== */
-
 body::-webkit-scrollbar-thumb {
   background: rgba(167, 15, 27, 0.38);
-
   border: 3px solid var(--bg-dark);
   border-radius: var(--radius);
 }
-
-/* ==========================================================
-   Scrollbar Thumb Hover
-========================================================== */
 
 body::-webkit-scrollbar-thumb:hover {
   background: rgba(167, 15, 27, 0.55);
 }
 
 /* ==========================================================
-   05. APP LAYOUT
-   ----------------------------------------------------------
-   Global Application Layout
-   - Portfolio Container
-   - Decorative Background
-   - Section Wrapper
-   - Fixed Navigation
-   - Mobile Sidebar
-   - Scroll Offset
+   05. APP LAYOUT — Shell, background shapes, sections, nav, mobile sidebar
 ========================================================== */
 
-/* ==========================================================
-   Portfolio Container
-========================================================== */
-
+/* Portfolio container */
 .portfolio-shell {
   position: relative;
   isolation: isolate;
-
   min-height: 100vh;
-
   background: transparent;
 }
 
-/* ==========================================================
-   Decorative Background
-========================================================== */
-
+/* Decorative background shapes */
 .portfolio-shell::before,
 .portfolio-shell::after {
   content: "";
-
   position: fixed;
   z-index: -1;
-
   width: 28rem;
   height: 28rem;
-
   pointer-events: none;
-
   border: 1px solid var(--border);
-
   transform: rotate(18deg);
 }
 
 .portfolio-shell::before {
   top: 6rem;
   left: -18rem;
-
   background: rgba(255, 252, 247, 0.42);
 }
 
 .portfolio-shell::after {
   right: -19rem;
   bottom: 4rem;
-
   background: rgba(167, 15, 27, 0.05);
 }
 
-/* ==========================================================
-   Main Content Wrapper
-========================================================== */
-
+/* Main content wrapper */
 .portfolio-shell > main,
 .portfolio-shell > section {
   width: min(1280px, calc(100% - 3rem));
-
   margin-inline: auto;
-
   padding-block: 4rem;
 }
 
@@ -328,70 +202,43 @@ body::-webkit-scrollbar-thumb:hover {
   padding-bottom: 4rem;
 }
 
-/* ==========================================================
-   Scroll Offset
-========================================================== */
-
+/* Scroll offset for anchored sections */
 section[id] {
   scroll-margin-top: 6rem;
 }
 
-/* ==========================================================
-   Fixed Navigation
-========================================================== */
-
+/* Fixed navigation */
 nav.fixed {
   background: rgba(255, 248, 239, 0.86);
-
   border-bottom: 1px solid var(--border);
-
   box-shadow: 0 12px 34px rgba(81, 23, 17, 0.07);
-
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
-/* ==========================================================
-   Mobile Navigation / Sidebar
-========================================================== */
-
+/* Mobile navigation / sidebar */
 aside[role="dialog"] {
   background: linear-gradient(
     155deg,
     rgba(255, 252, 247, 0.98),
     rgba(250, 237, 222, 0.98)
   );
-
   border-left: 1px solid var(--border-strong);
-
   box-shadow: -30px 0 90px rgba(81, 23, 17, 0.18);
 }
 
 aside[role="dialog"] > div:first-child {
   background: rgba(255, 248, 239, 0.86);
-
   border-bottom: 1px solid var(--border);
-
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
 /* ==========================================================
-   06. GLOBAL COMPONENTS
-   ----------------------------------------------------------
-   Shared UI Components
-   - Border Radius
-   - Cards
-   - Chips
-   - Borders
-   - Buttons
-   - Typography
+   06. GLOBAL COMPONENTS — Radius, cards, borders, outline buttons, typography
 ========================================================== */
 
-/* ==========================================================
-   Global Border Radius
-========================================================== */
-
+/* Global border radius */
 .rounded,
 .rounded-md,
 .rounded-lg,
@@ -403,10 +250,7 @@ img.rounded {
   border-radius: var(--radius) !important;
 }
 
-/* ==========================================================
-   Global Cards
-========================================================== */
-
+/* Global cards */
 .bg-\(--card\),
 .bg-\(--chip\) {
   background: linear-gradient(
@@ -414,7 +258,6 @@ img.rounded {
     rgba(255, 252, 247, 0.96),
     rgba(249, 239, 227, 0.92)
   ) !important;
-
   box-shadow: var(--shadow-sm);
 }
 
@@ -423,26 +266,17 @@ img.rounded {
   box-shadow: var(--shadow-md);
 }
 
-/* ==========================================================
-   Global Borders
-========================================================== */
-
+/* Global borders */
 .border-\(--border\) {
   border-color: var(--border) !important;
 }
 
-/* ==========================================================
-   Outline Buttons
-========================================================== */
-
+/* Outline buttons */
 a[class*="border-(--primary)"],
 button[class*="border-(--primary)"] {
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.76);
-
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
-
   transition:
     background 240ms ease,
     color 240ms ease,
@@ -457,16 +291,11 @@ button[class*="border-(--primary)"]:hover {
     var(--primary),
     var(--primary-light)
   ) !important;
-
   color: #fff !important;
-
   box-shadow: 0 14px 30px rgba(167, 15, 27, 0.22);
 }
 
-/* ==========================================================
-   Global Typography
-========================================================== */
-
+/* Global typography */
 section p {
   text-align: justify;
 }
@@ -476,73 +305,47 @@ section p {
 }
 
 /* ==========================================================
-   07. HERO SECTION
-   ----------------------------------------------------------
-   Hero Layout
-   - Hero Container
-   - Intro
-   - Title
-   - Description
-   - Highlights
-   - Action Buttons
-   - Statistics
+   07. HERO SECTION — Container, eyebrow, title, description, stack, actions, stats
 ========================================================== */
 
-/* ==========================================================
-   Hero Container
-========================================================== */
-
+/* Hero container */
 .hero-section {
   font-family: var(--font-primary);
 }
 
 #Home {
   position: relative;
-
   display: grid;
   gap: 2rem;
-
   min-height: auto;
 }
 
 .hero-copy {
   position: relative;
   z-index: 1;
-
   max-width: 58rem;
 }
 
-/* ==========================================================
-   Hero Eyebrow
-========================================================== */
-
+/* Hero eyebrow */
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-
   padding: 0.55rem 0.75rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.78);
-
   color: var(--primary);
-
   font-size: 0.76rem;
   font-weight: 700;
-
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
   box-shadow: var(--shadow-sm);
 }
 
 .hero-eyebrow-divider {
   width: 1px;
   height: 1rem;
-
   background: var(--border-strong);
 }
 
@@ -552,75 +355,50 @@ section p {
   gap: 0.35rem;
 }
 
-/* ==========================================================
-   Hero Title
-========================================================== */
-
+/* Hero title */
 .hero-title {
   max-width: 12ch;
-
   margin-top: 1.6rem;
-
   letter-spacing: 0;
   text-wrap: balance;
-
   color: var(--secondary);
-
   font-size: clamp(2.75rem, 5vw, 3.9rem);
   font-weight: 800;
-
   line-height: 0.98;
   text-transform: uppercase;
 }
 
 .hero-title span {
   display: block;
-
   color: var(--primary);
 }
 
-/* ==========================================================
-   Hero Description
-========================================================== */
-
+/* Hero description */
 .hero-description {
   max-width: 66ch;
-
   margin-top: 1.5rem;
-
   color: var(--secondary-light);
-
   font-size: 0.95rem;
   line-height: 1.85;
-
   text-align: justify !important;
 }
 
-/* ==========================================================
-   Hero Highlights
-========================================================== */
-
+/* Hero highlights */
 .hero-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
-
   margin-top: 1.35rem;
 }
 
 .hero-stack span {
   padding: 0.55rem 0.72rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.8);
-
   color: var(--secondary);
-
   font-size: 0.82rem;
   font-weight: 700;
-
   transition:
     background 220ms ease,
     color 220ms ease,
@@ -629,21 +407,15 @@ section p {
 
 .hero-stack span:hover {
   border-color: var(--primary);
-
   background: var(--primary);
-
   color: #fff;
 }
 
-/* ==========================================================
-   Hero Actions
-========================================================== */
-
+/* Hero actions */
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-
   margin-top: 2rem;
 }
 
@@ -652,30 +424,21 @@ section p {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-
   padding: 0.8rem 1.6rem;
-
   border: 1px solid var(--primary);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.78);
-
   color: var(--primary);
-
   font-size: 0.78rem;
   font-weight: 700;
-
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
   transition: all 240ms ease;
 }
 
 .hero-button:hover {
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
-
   border-color: var(--primary-light);
-
   color: #fff;
 }
 
@@ -689,50 +452,36 @@ section p {
 
 .hero-button.secondary {
   border-color: var(--border);
-
   color: var(--secondary);
 }
 
 .hero-button.secondary:hover {
   background: var(--secondary);
-
   border-color: var(--secondary);
-
   color: #fff;
 }
 
-/* ==========================================================
-   Hero Statistics
-========================================================== */
-
+/* Hero statistics */
 .hero-stats {
   position: relative;
   z-index: 1;
-
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
   gap: 0.85rem;
-
   width: 100%;
 }
 
 .hero-stat-card {
   min-width: 0;
-
   padding: 1.15rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: linear-gradient(
     145deg,
     rgba(255, 252, 247, 0.96),
     rgba(249, 239, 227, 0.9)
   );
-
   box-shadow: var(--shadow-sm);
-
   transition:
     transform 240ms ease,
     border-color 240ms ease,
@@ -741,62 +490,41 @@ section p {
 
 .hero-stat-card:hover {
   transform: translateY(-2px);
-
   border-color: var(--border-strong);
-
   box-shadow: var(--shadow-md);
 }
 
 .hero-stat-value {
   color: var(--primary);
-
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 800;
-
   line-height: 1;
 }
 
 .hero-stat-value span {
   font-size: 0.65em;
-
   vertical-align: top;
 }
 
 .hero-stat-label {
   margin-top: 0.75rem;
-
   color: var(--secondary-light);
-
   font-size: 0.78rem;
   font-weight: 700;
-
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 /* ==========================================================
-   08. ABOUT SECTION
-   ----------------------------------------------------------
-   About Layout
-   - Section Header
-   - Story Card
-   - Profile Cards
-   - Focus Area
-   - Skills
+   08. ABOUT SECTION — Header, story, profile cards, focus, skills
 ========================================================== */
 
-/* ==========================================================
-   About Container
-========================================================== */
-
+/* About container */
 .about-section {
   position: relative;
 }
 
-/* ==========================================================
-   About Header
-========================================================== */
-
+/* About header */
 .about-header {
   display: grid;
   gap: 1.25rem;
@@ -806,10 +534,8 @@ section p {
 .about-section-label,
 .about-story-label {
   color: var(--primary);
-
   font-size: 0.76rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -818,16 +544,11 @@ section p {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-
   width: fit-content;
-
   padding: 0.55rem 0.75rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.72);
-
   box-shadow: var(--shadow-sm);
 }
 
@@ -837,63 +558,45 @@ section p {
 }
 
 .about-heading-grid h2 {
-  max-width: 40ch;
-
+  /* max-width: 40ch; */
   color: var(--primary);
-
   font-size: clamp(2rem, 2vw, 3.75rem);
   font-weight: 800;
-
   line-height: 1.2;
-
   text-transform: uppercase;
   text-wrap: balance;
 }
 
 .about-heading-grid p {
   max-width: 38rem;
-
   color: var(--secondary-light);
-
   font-size: 0.95rem;
   line-height: 1.8;
 }
 
-/* ==========================================================
-   About Layout
-========================================================== */
-
+/* About layout */
 .about-layout {
   display: grid;
   gap: 1rem;
-
   margin-top: 2rem;
 }
 
-/* ==========================================================
-   Shared Cards
-========================================================== */
-
+/* Shared cards */
 .about-story,
 .about-profile-card,
 .about-focus,
 .about-skill-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: linear-gradient(
     145deg,
     rgba(255, 252, 247, 0.96),
     rgba(249, 239, 227, 0.9)
   );
-
   box-shadow: var(--shadow-sm);
 }
 
-/* ==========================================================
-   Story Card
-========================================================== */
-
+/* Story card */
 .about-story {
   padding: clamp(1.2rem, 3vw, 1.5rem);
 }
@@ -902,34 +605,25 @@ section p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 1rem;
-
   padding-bottom: 1rem;
-
   border-bottom: 1px solid var(--border);
 }
 
 .about-paragraphs {
   display: grid;
   gap: 1rem;
-
   margin-top: 1.25rem;
 }
 
 .about-paragraphs p {
   color: var(--secondary-light);
-
   font-size: 0.95rem;
   line-height: 1.85;
-
   text-align: justify;
 }
 
-/* ==========================================================
-   Profile Cards
-========================================================== */
-
+/* Profile cards */
 .about-profile-grid {
   display: grid;
   gap: 1rem;
@@ -937,7 +631,6 @@ section p {
 
 .about-profile-card {
   padding: 1.25rem;
-
   transition:
     transform 240ms ease,
     border-color 240ms ease,
@@ -946,18 +639,14 @@ section p {
 
 .about-profile-card:hover {
   transform: translateY(-2px);
-
   border-color: var(--border-strong);
-
   box-shadow: var(--shadow-md);
 }
 
 .about-profile-card p {
   color: var(--secondary-light);
-
   font-size: 0.72rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -970,30 +659,21 @@ section p {
   line-height: 1.35;
 }
 
-/* ==========================================================
-   Focus Section
-========================================================== */
-
+/* Focus section */
 .about-focus {
   display: grid;
   gap: 1.25rem;
-
   margin-top: 1rem;
-
   padding: clamp(1rem, 2.2vw, 1.35rem);
 }
 
 .about-focus h3,
 .about-skills-heading h3 {
   margin-top: 0.45rem;
-
   color: var(--secondary);
-
   font-size: clamp(1.15rem, 1.5vw, 1.65rem);
   font-weight: 800;
-
   line-height: 1.4;
-
   text-wrap: balance;
 }
 
@@ -1007,17 +687,12 @@ section p {
 .about-focus-list span,
 .about-skill-list span {
   padding: 0.55rem 0.68rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.8);
-
   color: var(--secondary);
-
   font-size: 0.82rem;
   font-weight: 700;
-
   transition:
     background 220ms ease,
     color 220ms ease,
@@ -1026,23 +701,17 @@ section p {
 
 .about-focus-list span {
   border-color: var(--border-strong);
-
   color: var(--primary);
 }
 
 .about-focus-list span:hover,
 .about-skill-list span:hover {
   background: var(--primary);
-
   border-color: var(--primary);
-
   color: #fff;
 }
 
-/* ==========================================================
-   Skills
-========================================================== */
-
+/* Skills */
 .about-skills {
   margin-top: 2.25rem;
 }
@@ -1055,13 +724,11 @@ section p {
 .about-skills-grid {
   display: grid;
   gap: 1rem;
-
   margin-top: 1.4rem;
 }
 
 .about-skill-card {
   padding: 1.15rem;
-
   transition:
     transform 240ms ease,
     border-color 240ms ease,
@@ -1070,18 +737,14 @@ section p {
 
 .about-skill-card:hover {
   transform: translateY(-2px);
-
   border-color: var(--border-strong);
-
   box-shadow: var(--shadow-md);
 }
 
 .about-skill-card h4 {
   color: var(--primary);
-
   font-size: 0.78rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1091,28 +754,15 @@ section p {
 }
 
 /* ==========================================================
-   09. TECH STACK SECTION
-   ----------------------------------------------------------
-   Tech Stack Layout
-   - Section Header
-   - Current Focus
-   - Technology Grid
-   - Technology Cards
-   - Skill Badges
+   09. TECH STACK SECTION — Header, current focus, grid, cards, skill badges
 ========================================================== */
 
-/* ==========================================================
-   Tech Stack Container
-========================================================== */
-
+/* Tech container */
 .tech-section {
   position: relative;
 }
 
-/* ==========================================================
-   Tech Stack Header
-========================================================== */
-
+/* Tech header */
 .tech-header {
   display: grid;
   gap: 1.25rem;
@@ -1121,10 +771,8 @@ section p {
 .tech-kicker,
 .tech-section-label {
   color: var(--primary);
-
   font-size: 0.76rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1133,16 +781,11 @@ section p {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-
   width: fit-content;
-
   padding: 0.55rem 0.75rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.72);
-
   box-shadow: var(--shadow-sm);
 }
 
@@ -1153,62 +796,45 @@ section p {
 
 .tech-heading-grid h2 {
   max-width: 40ch;
-
   color: var(--primary);
-
   font-size: clamp(2rem, 2vw, 3.75rem);
   font-weight: 800;
-
   line-height: 1.2;
-
   text-transform: uppercase;
   text-wrap: balance;
 }
 
 .tech-heading-grid p {
   max-width: 38rem;
-
   color: var(--secondary-light);
-
   font-size: 0.95rem;
   line-height: 1.8;
 }
 
-/* ==========================================================
-   Current Focus
-========================================================== */
-
+/* Current focus */
 .tech-focus {
   margin-top: 2rem;
-
   padding: 1.35rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: linear-gradient(
     145deg,
     rgba(255, 252, 247, 0.96),
     rgba(249, 239, 227, 0.9)
   );
-
   box-shadow: var(--shadow-sm);
 }
 
 .tech-focus h3 {
   color: var(--secondary);
-
   font-size: 1.25rem;
   font-weight: 800;
-
   line-height: 1.4;
 }
 
 .tech-focus p {
   margin-top: 0.65rem;
-
   color: var(--secondary-light);
-
   line-height: 1.8;
 }
 
@@ -1216,23 +842,17 @@ section p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
-
   margin-top: 1.25rem;
 }
 
 .tech-focus-list span {
   padding: 0.55rem 0.72rem;
-
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.82);
-
   color: var(--primary);
-
   font-size: 0.82rem;
   font-weight: 700;
-
   transition:
     background 220ms ease,
     color 220ms ease,
@@ -1241,46 +861,31 @@ section p {
 
 .tech-focus-list span:hover {
   background: var(--primary);
-
   border-color: var(--primary);
-
   color: #fff;
 }
 
-/* ==========================================================
-   Technology Grid
-========================================================== */
-
+/* Technology grid */
 .tech-grid {
   display: grid;
   gap: 1rem;
-
   margin-top: 2rem;
 }
 
-/* ==========================================================
-   Technology Card
-========================================================== */
-
+/* Technology card */
 .tech-card {
   display: grid;
   gap: 1.25rem;
-
   align-content: start;
-
   padding: 1.35rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: linear-gradient(
     145deg,
     rgba(255, 252, 247, 0.96),
     rgba(249, 239, 227, 0.9)
   );
-
   box-shadow: var(--shadow-sm);
-
   transition:
     transform 240ms ease,
     border-color 240ms ease,
@@ -1289,7 +894,6 @@ section p {
 
 .tech-card:hover {
   border-color: var(--border-strong);
-
   box-shadow: var(--shadow-md);
 }
 
@@ -1302,64 +906,45 @@ section p {
 .tech-card-icon {
   display: grid;
   place-items: center;
-
   width: 38px;
   height: 38px;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.82);
-
   color: var(--primary);
-
   font-size: 1.25rem;
 }
 
 .tech-card h3 {
   color: var(--secondary);
-
   font-size: 1.15rem;
   font-weight: 800;
-
   line-height: 1.35;
 }
 
 .tech-card p {
   color: var(--secondary-light);
-
   font-size: 0.95rem;
-
   line-height: 1.75;
 }
 
-/* ==========================================================
-   Skill Badges
-========================================================== */
-
+/* Skill badges */
 .tech-skill-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
-
   align-content: start;
-
   height: fit-content;
 }
 
 .tech-skill-list span {
   padding: 6px 12px;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.82);
-
   color: var(--secondary);
-
   font-size: 0.82rem;
   font-weight: 700;
-
   transition:
     background 220ms ease,
     color 220ms ease,
@@ -1368,35 +953,20 @@ section p {
 
 .tech-skill-list span:hover {
   background: var(--primary);
-
   border-color: var(--primary);
-
   color: #fff;
 }
 
 /* ==========================================================
-   10. EXPERIENCE SECTION
-   ----------------------------------------------------------
-   Experience Layout
-   - Section Header
-   - Experience List
-   - Experience Card
-   - Card Content
-   - Technology Stack
+   10. EXPERIENCE SECTION — Header, list, card, content, roles, tech tags
 ========================================================== */
 
-/* ==========================================================
-   Experience Container
-========================================================== */
-
+/* Experience container */
 .experience-section {
   position: relative;
 }
 
-/* ==========================================================
-   Experience Header
-========================================================== */
-
+/* Experience header */
 .experience-header {
   display: grid;
   gap: 1.25rem;
@@ -1405,10 +975,8 @@ section p {
 .experience-kicker,
 .experience-section-label {
   color: var(--primary);
-
   font-size: 0.76rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1417,16 +985,11 @@ section p {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-
   width: fit-content;
-
   padding: 0.55rem 0.75rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.72);
-
   box-shadow: var(--shadow-sm);
 }
 
@@ -1437,59 +1000,41 @@ section p {
 
 .experience-heading-grid h2 {
   max-width: 40ch;
-
   color: var(--primary);
-
   font-size: clamp(2rem, 2vw, 3.75rem);
   font-weight: 800;
-
   line-height: 1.2;
-
   text-transform: uppercase;
   text-wrap: balance;
 }
 
 .experience-heading-grid p {
   max-width: 38rem;
-
   color: var(--secondary-light);
-
   font-size: 0.95rem;
   line-height: 1.8;
 }
 
-/* ==========================================================
-   Experience List
-========================================================== */
-
+/* Experience list */
 .experience-list {
   display: grid;
   gap: 1rem;
-
   margin-top: 2rem;
 }
 
-/* ==========================================================
-   Experience Card
-========================================================== */
-
+/* Experience card */
 .experience-card {
   display: grid;
   gap: 1.4rem;
-
   padding: 1.4rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: linear-gradient(
     145deg,
     rgba(255, 252, 247, 0.96),
     rgba(249, 239, 227, 0.9)
   );
-
   box-shadow: var(--shadow-sm);
-
   transition:
     transform 240ms ease,
     border-color 240ms ease,
@@ -1498,16 +1043,11 @@ section p {
 
 .experience-card:hover {
   transform: translateY(-2px);
-
   border-color: var(--border-strong);
-
   box-shadow: var(--shadow-md);
 }
 
-/* ==========================================================
-   Card Header
-========================================================== */
-
+/* Card header */
 .experience-top {
   display: flex;
   align-items: center;
@@ -1517,29 +1057,20 @@ section p {
 .experience-duration {
   display: inline-flex;
   align-items: center;
-
   padding: 0.55rem 0.85rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.84);
-
   color: var(--primary);
-
   font-size: 0.78rem;
   font-weight: 800;
-
   letter-spacing: 0.05em;
-
   box-shadow: var(--shadow-sm);
 }
 
 .experience-arrow {
   color: var(--primary);
-
   font-size: 1.2rem;
-
   transition:
     transform 220ms ease,
     color 220ms ease;
@@ -1547,14 +1078,10 @@ section p {
 
 .experience-card:hover .experience-arrow {
   transform: translate(4px, -4px);
-
   color: var(--primary-light);
 }
 
-/* ==========================================================
-   Card Content
-========================================================== */
-
+/* Card content */
 .experience-content {
   display: grid;
   gap: 1rem;
@@ -1562,7 +1089,6 @@ section p {
 
 .experience-content h3 {
   color: var(--secondary);
-
   font-size: clamp(1.2rem, 1vw, 1.7rem);
   font-weight: 800;
   text-transform: uppercase;
@@ -1578,7 +1104,6 @@ section p {
 
 .experience-company > span {
   color: var(--primary);
-
   font-size: 0.95rem;
   font-weight: 700;
 }
@@ -1587,9 +1112,7 @@ section p {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-
   color: var(--secondary-light);
-
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -1600,16 +1123,33 @@ section p {
 
 .experience-summary {
   color: var(--secondary-light);
-
   font-size: 0.95rem;
-
   line-height: 1.85;
 }
 
-/* ==========================================================
-   Technology Stack
-========================================================== */
+/* Roles inside one company card */
+.experience-role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
 
+.experience-role-period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.experience-role + .experience-role {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px dashed color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+/* Technology stack tags */
 .experience-tech {
   display: flex;
   flex-wrap: wrap;
@@ -1618,17 +1158,12 @@ section p {
 
 .experience-tech span {
   padding: 6px 12px;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.8);
-
   color: var(--secondary);
-
   font-size: 0.75rem;
   font-weight: 700;
-
   transition:
     background 220ms ease,
     color 220ms ease,
@@ -1637,37 +1172,20 @@ section p {
 
 .experience-tech span:hover {
   background: var(--primary);
-
   border-color: var(--primary);
-
   color: #fff;
 }
 
 /* ==========================================================
-   11. PROJECTS SECTION
-   ----------------------------------------------------------
-   Projects Layout
-   - Section Header
-   - Projects Grid
-   - Project Card
-   - Project Image
-   - Project Content
-   - Technology Stack
-   - Action Button
+   11. PROJECTS SECTION — Header, grid, card, image, content, tech tags, button
 ========================================================== */
 
-/* ==========================================================
-   Projects Container
-========================================================== */
-
+/* Projects container */
 .projects-section {
   position: relative;
 }
 
-/* ==========================================================
-   Projects Header
-========================================================== */
-
+/* Projects header */
 .projects-header {
   display: grid;
   gap: 1.25rem;
@@ -1676,10 +1194,8 @@ section p {
 .projects-kicker,
 .projects-section-label {
   color: var(--primary);
-
   font-size: 0.76rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1688,16 +1204,11 @@ section p {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-
   width: fit-content;
-
   padding: 0.55rem 0.75rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.72);
-
   box-shadow: var(--shadow-sm);
 }
 
@@ -1708,56 +1219,39 @@ section p {
 
 .projects-heading-grid h2 {
   max-width: 40ch;
-
   color: var(--primary);
-
   font-size: clamp(2rem, 2vw, 3.75rem);
   font-weight: 800;
-
   line-height: 1.2;
-
   text-transform: uppercase;
   text-wrap: balance;
 }
 
 .projects-heading-grid p {
   max-width: 38rem;
-
   color: var(--secondary-light);
-
   font-size: 0.95rem;
   line-height: 1.8;
 }
 
-/* ==========================================================
-   Projects Grid
-========================================================== */
-
+/* Projects grid */
 .projects-grid {
   display: grid;
   gap: 1rem;
-
   margin-top: 2rem;
 }
 
-/* ==========================================================
-   Project Card
-========================================================== */
-
+/* Project card */
 .project-card {
   overflow: hidden;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: linear-gradient(
     145deg,
     rgba(255, 252, 247, 0.96),
     rgba(249, 239, 227, 0.9)
   );
-
   box-shadow: var(--shadow-sm);
-
   transition:
     transform 240ms ease,
     border-color 240ms ease,
@@ -1766,25 +1260,17 @@ section p {
 
 .project-card:hover {
   transform: translateY(-2px);
-
   border-color: var(--border-strong);
-
   box-shadow: var(--shadow-md);
 }
 
-/* ==========================================================
-   Project Image
-========================================================== */
-
+/* Project image */
 .project-image {
   width: 100%;
   height: 260px;
-
   object-fit: cover;
   object-position: top;
-
   border-bottom: 1px solid var(--border);
-
   transition: transform 450ms ease;
 }
 
@@ -1792,14 +1278,10 @@ section p {
   transform: scale(1.04);
 }
 
-/* ==========================================================
-   Project Content
-========================================================== */
-
+/* Project content */
 .project-content {
   display: grid;
   gap: 1.2rem;
-
   padding: 1.4rem;
 }
 
@@ -1819,30 +1301,23 @@ section p {
 .project-icon {
   width: 52px;
   height: 52px;
-
   object-fit: contain;
-
   flex-shrink: 0;
 }
 
 .project-type {
   margin-bottom: 0.45rem;
-
   color: var(--primary);
-
   font-size: 0.76rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .project-title h3 {
   color: var(--secondary);
-
   font-size: clamp(1.2rem, 1.5vw, 1.65rem);
   font-weight: 800;
-
   line-height: 1.35;
 }
 
@@ -1850,16 +1325,13 @@ section p {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-
   color: var(--primary);
-
   font-size: 0.82rem;
   font-weight: 800;
 }
 
 .project-arrow {
   font-size: 1.2rem;
-
   transition:
     transform 220ms ease,
     color 220ms ease;
@@ -1867,22 +1339,16 @@ section p {
 
 .project-card:hover .project-arrow {
   transform: translate(4px, -4px);
-
   color: var(--primary-light);
 }
 
 .project-description {
   color: var(--secondary-light);
-
   font-size: 0.95rem;
-
   line-height: 1.85;
 }
 
-/* ==========================================================
-   Technology Stack
-========================================================== */
-
+/* Technology stack tags */
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -1891,17 +1357,12 @@ section p {
 
 .project-tech span {
   padding: 4px 8px;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.8);
-
   color: var(--secondary);
-
   font-size: 0.75rem;
   font-weight: 700;
-
   transition:
     background 220ms ease,
     color 220ms ease,
@@ -1910,40 +1371,26 @@ section p {
 
 .project-tech span:hover {
   background: var(--primary);
-
   border-color: var(--primary);
-
   color: #fff;
 }
 
-/* ==========================================================
-   Action Button
-========================================================== */
-
+/* Action button */
 .project-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: fit-content;
-
   margin-top: 0.5rem;
-
   padding: 0.6rem 1.4rem;
-
   border: 1px solid var(--primary);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.78);
-
   color: var(--primary);
-
   font-size: 0.78rem;
   font-weight: 700;
-
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
   transition:
     background 240ms ease,
     color 240ms ease,
@@ -1953,17 +1400,14 @@ section p {
 
 .project-button:hover {
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
-
   border-color: var(--primary-light);
-
   color: #fff;
-
   box-shadow: 0 12px 28px rgba(167, 15, 27, 0.18);
 }
 
-/* ==========================================================
-   PROJECT DETAILS
-========================================================== */
+/* ----------------------------------------------------------
+   Project details page
+---------------------------------------------------------- */
 
 .project-detail {
   width: min(1100px, calc(100% - 3rem));
@@ -1972,42 +1416,29 @@ section p {
   padding-bottom: 5rem;
 }
 
-/* ==========================================================
-   BACK BUTTON
-========================================================== */
-
+/* Back button */
 .project-back {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-
   width: fit-content;
-
   color: var(--primary);
-
   font-size: 0.82rem;
   font-weight: 800;
-
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
   transition: color 240ms ease;
 }
 
 .project-back svg {
   font-size: 1.15rem;
-
   transition: transform 240ms ease;
 }
 
-/* ==========================================================
-   HEADER
-========================================================== */
-
+/* Header */
 .project-detail-header {
   display: grid;
   gap: 1.5rem;
-
   margin-top: 2rem;
 }
 
@@ -2020,107 +1451,76 @@ section p {
 
 .project-detail-type {
   width: fit-content;
-
   padding: 0.55rem 0.8rem;
-
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.8);
-
   color: var(--primary);
-
   font-size: 0.76rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .project-detail-title {
   margin-top: 1rem;
-
   color: var(--primary);
-
   font-size: clamp(2.2rem, 4vw, 4rem);
   font-weight: 800;
-
   line-height: 1.1;
   text-transform: uppercase;
 }
 
 .project-detail-year {
   flex-shrink: 0;
-
   color: var(--primary);
-
   font-size: 0.9rem;
   font-weight: 800;
-
   letter-spacing: 0.08em;
 }
 
 .project-detail-description {
   max-width: 60rem;
-
   color: var(--secondary-light);
-
   font-size: 0.95rem;
   line-height: 1.9;
 }
 
-/* ==========================================================
-   HERO IMAGE
-========================================================== */
-
+/* Hero image */
 .project-detail-image-wrapper {
   overflow: hidden;
-
   margin-top: 2.5rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: linear-gradient(
     145deg,
     rgba(255, 252, 247, 0.96),
     rgba(249, 239, 227, 0.9)
   );
-
   box-shadow: var(--shadow-md);
 }
 
 .project-detail-image {
   width: 100%;
   display: block;
-
   transition: transform 450ms ease;
 }
 
-/* ==========================================================
-   CONTENT SECTION
-========================================================== */
-
+/* Content section */
 .project-detail-section {
   margin-top: 3rem;
 }
 
 .project-detail-heading {
   margin-bottom: 1.4rem;
-
   color: var(--primary);
-
   font-size: 0.82rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-/* ==========================================================
-   TECHNOLOGIES
-========================================================== */
-
+/* Technologies */
 .project-detail-tech {
   display: flex;
   flex-wrap: wrap;
@@ -2129,31 +1529,22 @@ section p {
 
 .project-detail-tech span {
   padding: 6px 12px;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.8);
-
   color: var(--secondary);
-
   font-size: 0.82rem;
   font-weight: 700;
-
   transition:
     background 220ms ease,
     border-color 220ms ease,
     color 220ms ease;
 }
 
-/* ==========================================================
-   LISTS
-========================================================== */
-
+/* Lists */
 .project-detail-list {
   display: grid;
   gap: 0.2rem;
-
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2167,30 +1558,22 @@ section p {
 
 .project-detail-item svg {
   flex-shrink: 0;
-
   margin-top: 6px;
-
   color: var(--primary);
-
   font-size: 1.15rem;
 }
 
 .project-detail-item span {
   color: var(--secondary-light);
-
   font-size: 0.95rem;
   line-height: 1.85;
 }
 
-/* ==========================================================
-   ACTIONS
-========================================================== */
-
+/* Actions */
 .project-detail-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-
   margin-top: 3rem;
 }
 
@@ -2199,22 +1582,15 @@ section p {
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-
   padding: 0.85rem 1.4rem;
-
   border: 1px solid var(--primary);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.78);
-
   color: var(--primary);
-
   font-size: 0.78rem;
   font-weight: 700;
-
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
   transition: all 240ms ease;
 }
 
@@ -2223,10 +1599,7 @@ section p {
   color: var(--secondary);
 }
 
-/* ==========================================================
-   HOVER EFFECTS
-========================================================== */
-
+/* Hover effects */
 .project-back:hover {
   color: var(--secondary);
 }
@@ -2247,11 +1620,8 @@ section p {
 
 .project-detail-button:hover {
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
-
   border-color: var(--primary-light);
-
   color: #fff;
-
   box-shadow: 0 12px 28px rgba(167, 15, 27, 0.18);
 }
 
@@ -2265,18 +1635,12 @@ section p {
   color: #fff;
 }
 
-/* ==========================================================
-   BUTTON ICON
-========================================================== */
-
+/* Button icon */
 .project-detail-button svg {
   transition: transform 220ms ease;
 }
 
-/* ==========================================================
-   DESKTOP
-========================================================== */
-
+/* Desktop */
 @media (min-width: 1280px) {
   .project-detail {
     width: min(1180px, calc(100% - 3rem));
@@ -2291,14 +1655,10 @@ section p {
   }
 }
 
-/* ==========================================================
-   TABLET
-========================================================== */
-
+/* Tablet */
 @media (max-width: 768px) {
   .project-detail {
     width: min(100% - 2rem, 1180px);
-
     padding-top: 7rem;
     padding-bottom: 4rem;
   }
@@ -2353,14 +1713,10 @@ section p {
   }
 }
 
-/* ==========================================================
-   MOBILE
-========================================================== */
-
+/* Mobile */
 @media (max-width: 480px) {
   .project-detail {
     width: min(100% - 1.5rem, 1180px);
-
     padding-top: 6rem;
     padding-bottom: 3rem;
   }
@@ -2413,10 +1769,7 @@ section p {
   }
 }
 
-/* ==========================================================
-   REDUCED MOTION
-========================================================== */
-
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .project-back,
   .project-back svg,
@@ -2441,27 +1794,15 @@ section p {
 }
 
 /* ==========================================================
-   12. CONTACT SECTION
-   ----------------------------------------------------------
-   Contact Layout
-   - Section Header
-   - Contact Card
-   - Content
-   - Action Buttons
+   12. CONTACT SECTION — Header, card, content, action buttons
 ========================================================== */
 
-/* ==========================================================
-   Contact Container
-========================================================== */
-
+/* Contact container */
 .contact-section {
   position: relative;
 }
 
-/* ==========================================================
-   Contact Header
-========================================================== */
-
+/* Contact header */
 .contact-header {
   display: grid;
   gap: 1.25rem;
@@ -2470,10 +1811,8 @@ section p {
 .contact-kicker,
 .contact-section-label {
   color: var(--primary);
-
   font-size: 0.76rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -2482,16 +1821,11 @@ section p {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-
   width: fit-content;
-
   padding: 0.55rem 0.75rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.72);
-
   box-shadow: var(--shadow-sm);
 }
 
@@ -2502,45 +1836,32 @@ section p {
 
 .contact-heading-grid h2 {
   max-width: 40ch;
-
   color: var(--primary);
-
   font-size: clamp(2rem, 2vw, 3.75rem);
   font-weight: 800;
-
   line-height: 1.2;
-
   text-transform: uppercase;
   text-wrap: balance;
 }
 
 .contact-heading-grid p {
   max-width: 38rem;
-
   color: var(--secondary-light);
-
   font-size: 0.95rem;
   line-height: 1.8;
 }
 
-/* ==========================================================
-   Contact Card
-========================================================== */
-
+/* Contact card */
 .contact-card {
   margin-top: 2rem;
-
   border: 1px solid var(--border);
   border-radius: var(--radius);
-
   background: linear-gradient(
     145deg,
     rgba(255, 252, 247, 0.96),
     rgba(249, 239, 227, 0.9)
   );
-
   box-shadow: var(--shadow-sm);
-
   transition:
     transform 240ms ease,
     border-color 240ms ease,
@@ -2549,45 +1870,32 @@ section p {
 
 .contact-card:hover {
   transform: translateY(-2px);
-
   border-color: var(--border-strong);
-
   box-shadow: var(--shadow-md);
 }
 
-/* ==========================================================
-   Contact Content
-========================================================== */
-
+/* Contact content */
 .contact-content {
   display: grid;
   gap: 1.25rem;
-
   padding: 2rem;
 }
 
 .contact-label {
   width: fit-content;
-
   padding: 0.55rem 0.8rem;
-
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.82);
-
   color: var(--primary);
-
   font-size: 0.76rem;
   font-weight: 800;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .contact-content h3 {
   color: var(--secondary);
-
   font-size: clamp(1.35rem, 1vw, 2rem);
   font-weight: 800;
   text-transform: uppercase;
@@ -2596,21 +1904,15 @@ section p {
 
 .contact-description {
   color: var(--secondary-light);
-
   font-size: 0.95rem;
-
   line-height: 1.85;
 }
 
-/* ==========================================================
-   Contact Actions
-========================================================== */
-
+/* Contact actions */
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-
   margin-top: 0.5rem;
 }
 
@@ -2619,24 +1921,16 @@ section p {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-
   width: fit-content;
-
   padding: 10px 20px;
-
   border: 1px solid var(--primary);
   border-radius: var(--radius);
-
   background: rgba(255, 252, 247, 0.78);
-
   color: var(--primary);
-
   font-size: 0.78rem;
   font-weight: 700;
-
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
   transition:
     background 240ms ease,
     color 240ms ease,
@@ -2650,11 +1944,8 @@ section p {
 
 .contact-button:hover {
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
-
   border-color: var(--primary-light);
-
   color: #fff;
-
   box-shadow: 0 12px 28px rgba(167, 15, 27, 0.18);
 }
 
@@ -2664,35 +1955,21 @@ section p {
 
 .contact-button.secondary {
   border-color: var(--border);
-
   background: rgba(255, 252, 247, 0.55);
-
   color: var(--secondary);
 }
 
 .contact-button.secondary:hover {
   background: var(--secondary);
-
   border-color: var(--secondary);
-
   color: #fff;
 }
 
 /* ==========================================================
-   13. ANIMATIONS
-   ----------------------------------------------------------
-   Global Animations
-   - Hover Effects
-   - Utility Classes
-   - Arrow Animation
-   - Keyframes
-   - Motion Preferences
+   13. ANIMATIONS — Transition utilities, utility classes, keyframes, motion
 ========================================================== */
 
-/* ==========================================================
-   Transition Utilities
-========================================================== */
-
+/* Transition utilities */
 .hero-button,
 .project-button,
 .contact-button,
@@ -2723,85 +2000,54 @@ section p {
     opacity 240ms ease;
 }
 
-/* ==========================================================
-   Slow Spin
-========================================================== */
-
+/* Slow spin */
 .slow-spin {
   animation: slowSpin 4s linear infinite;
 }
 
-/* ==========================================================
-   Arrow Animation Wrapper
-========================================================== */
-
+/* Arrow animation wrapper */
 .arrow-animation {
   position: absolute;
   inset: 0;
   z-index: 0;
-
   overflow: hidden;
   pointer-events: none;
 }
 
-/* ==========================================================
-   Left Arrow Group
-========================================================== */
-
+/* Left arrow group */
 .arrow-left {
   position: absolute;
-
   left: -8rem;
   top: 12%;
-
   opacity: 0.08;
-
   animation: arrowFloatLeft 12s ease-in-out infinite;
 }
 
-/* ==========================================================
-   Right Arrow Group
-========================================================== */
-
+/* Right arrow group */
 .arrow-right {
   position: absolute;
-
   right: -8rem;
   bottom: 10%;
-
   opacity: 0.08;
-
   animation: arrowFloatRight 14s ease-in-out infinite;
 }
 
-/* ==========================================================
-   Fade In Utility
-========================================================== */
-
+/* Fade in utility */
 .fade-in {
   animation: fadeInUp 0.8s ease both;
 }
 
-/* ==========================================================
-   Float Utility
-========================================================== */
-
+/* Float utility */
 .float {
   animation: floating 6s ease-in-out infinite;
 }
 
-/* ==========================================================
-   Pulse Utility
-========================================================== */
-
+/* Pulse utility */
 .pulse {
   animation: pulse 2.5s ease-in-out infinite;
 }
 
-/* ==========================================================
-   Keyframes : Slow Spin
-========================================================== */
-
+/* Keyframes: slow spin */
 @keyframes slowSpin {
   from {
     transform: rotate(0deg);
@@ -2812,28 +2058,20 @@ section p {
   }
 }
 
-/* ==========================================================
-   Keyframes : Fade Up
-========================================================== */
-
+/* Keyframes: fade up */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-
     transform: translateY(24px);
   }
 
   to {
     opacity: 1;
-
     transform: translateY(0);
   }
 }
 
-/* ==========================================================
-   Keyframes : Floating
-========================================================== */
-
+/* Keyframes: floating */
 @keyframes floating {
   0%,
   100% {
@@ -2845,29 +2083,21 @@ section p {
   }
 }
 
-/* ==========================================================
-   Keyframes : Pulse
-========================================================== */
-
+/* Keyframes: pulse */
 @keyframes pulse {
   0%,
   100% {
     transform: scale(1);
-
     opacity: 1;
   }
 
   50% {
     transform: scale(1.04);
-
     opacity: 0.9;
   }
 }
 
-/* ==========================================================
-   Keyframes : Left Arrow
-========================================================== */
-
+/* Keyframes: left arrow float */
 @keyframes arrowFloatLeft {
   0%,
   100% {
@@ -2879,10 +2109,7 @@ section p {
   }
 }
 
-/* ==========================================================
-   Keyframes : Right Arrow
-========================================================== */
-
+/* Keyframes: right arrow float */
 @keyframes arrowFloatRight {
   0%,
   100% {
@@ -2894,10 +2121,7 @@ section p {
   }
 }
 
-/* ==========================================================
-   Reduced Motion
-========================================================== */
-
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2909,24 +2133,12 @@ section p {
 }
 
 /* ==========================================================
-   14. RESPONSIVE DESIGN
-   ----------------------------------------------------------
-   Breakpoints
-   - Large Desktop (1280px+)
-   - Laptop (≤1100px)
-   - Tablet (≤768px)
-   - Mobile (≤480px)
+   14. RESPONSIVE DESIGN — Large desktop (1280px+), laptop (≤1100px), tablet (≤768px), mobile (≤480px)
 ========================================================== */
 
-/* ==========================================================
-   LARGE DESKTOP
-   ==========================================================
-   >= 1280px
-========================================================== */
-
+/* Large desktop: >= 1280px */
 @media (min-width: 1280px) {
-  /* ---------- Shared Section Header ---------- */
-
+  /* Shared section header */
   .about-heading-grid,
   .tech-heading-grid,
   .experience-heading-grid,
@@ -2944,8 +2156,7 @@ section p {
     margin-top: 0.5rem;
   }
 
-  /* ---------- Hero ---------- */
-
+  /* Hero */
   .hero-section {
     grid-template-columns: minmax(0, 1fr) 18rem;
     align-items: center;
@@ -2964,8 +2175,7 @@ section p {
     grid-template-columns: 1fr;
   }
 
-  /* ---------- About ---------- */
-
+  /* About */
   .about-layout {
     grid-template-columns: 2fr 1fr;
   }
@@ -2974,31 +2184,23 @@ section p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* ---------- Tech ---------- */
-
+  /* Tech */
   .tech-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* ---------- Projects ---------- */
-
+  /* Projects */
   .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* ---------- Contact ---------- */
-
+  /* Contact */
   .contact-content {
     padding: 1.5rem;
   }
 }
 
-/* ==========================================================
-   LAPTOP
-   ==========================================================
-   <= 1100px
-========================================================== */
-
+/* Laptop: <= 1100px */
 @media (max-width: 1100px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -3025,15 +2227,9 @@ section p {
   }
 }
 
-/* ==========================================================
-   TABLET
-   ==========================================================
-   <= 768px
-========================================================== */
-
+/* Tablet: <= 768px */
 @media (max-width: 768px) {
-  /* ---------- Shared ---------- */
-
+  /* Shared */
   .about-header,
   .tech-header,
   .experience-header,
@@ -3066,8 +2262,7 @@ section p {
     max-width: 100%;
   }
 
-  /* ---------- Hero ---------- */
-
+  /* Hero */
   .hero-title {
     font-size: clamp(2.6rem, 8vw, 3.4rem);
   }
@@ -3088,8 +2283,7 @@ section p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* ---------- About ---------- */
-
+  /* About, tech, projects */
   .about-layout,
   .about-skills-grid,
   .tech-grid,
@@ -3097,15 +2291,13 @@ section p {
     grid-template-columns: 1fr;
   }
 
-  /* ---------- Experience ---------- */
-
+  /* Experience */
   .experience-company {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  /* ---------- Projects ---------- */
-
+  /* Projects */
   .project-card-top {
     flex-direction: column;
   }
@@ -3119,8 +2311,7 @@ section p {
     justify-content: center;
   }
 
-  /* ---------- Contact ---------- */
-
+  /* Contact */
   .contact-actions {
     flex-direction: column;
   }
@@ -3130,15 +2321,9 @@ section p {
   }
 }
 
-/* ==========================================================
-   MOBILE
-   ==========================================================
-   <= 480px
-========================================================== */
-
+/* Mobile: <= 480px */
 @media (max-width: 480px) {
-  /* ---------- Shared Kicker ---------- */
-
+  /* Shared kicker */
   .about-kicker,
   .tech-kicker,
   .experience-kicker,
@@ -3148,8 +2333,7 @@ section p {
     justify-content: center;
   }
 
-  /* ---------- Hero ---------- */
-
+  /* Hero */
   .hero-title {
     font-size: 2.3rem;
   }
@@ -3171,8 +2355,7 @@ section p {
     grid-template-columns: 1fr;
   }
 
-  /* ---------- Cards ---------- */
-
+  /* Cards */
   .about-story,
   .about-profile-card,
   .about-focus,
@@ -3184,8 +2367,7 @@ section p {
     padding: 1rem;
   }
 
-  /* ---------- Projects ---------- */
-
+  /* Projects */
   .project-image {
     height: 180px;
   }
@@ -3205,8 +2387,7 @@ section p {
     font-size: 1.1rem;
   }
 
-  /* ---------- Badges ---------- */
-
+  /* Badges */
   .hero-stack span,
   .about-focus-list span,
   .about-skill-list span,
@@ -3218,8 +2399,7 @@ section p {
     padding: 0.45rem 0.6rem;
   }
 
-  /* ---------- Buttons ---------- */
-
+  /* Buttons */
   .hero-button,
   .project-button,
   .contact-button {
@@ -3227,6 +2407,11 @@ section p {
     font-size: 0.74rem;
   }
 }
+
+/* ==========================================================
+   15. EXTRA ANIMATIONS — Text reveal and hero arrow cycle
+   (these come last so they keep overriding the earlier arrow animation)
+========================================================== */
 
 @keyframes textReveal {
   from {

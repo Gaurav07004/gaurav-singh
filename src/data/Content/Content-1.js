@@ -4,16 +4,16 @@
 
 export const heroStatistics = [
   {
-    value: "01",
+    value: "1+",
     label: "Years of Professional Experience",
   },
   {
-    value: "02",
-    label: "Production SaaS Platforms Delivered",
+    value: "01",
+    label: "SaaS Platform Contributed To",
   },
   {
-    value: "10",
-    label: "Modules and Features Delivered",
+    value: "02",
+    label: "Full-Stack Projects Built",
   },
 ];
 
@@ -22,7 +22,7 @@ export const heroProfile = [
     name: "Gaurav Singh",
     designation: "Software Developer",
     about:
-      "I am a Software Developer with 1+ year of experience building scalable SaaS and enterprise web applications using MongoDB, Express.js, React.js, Node.js, JavaScript, Redux Toolkit, and RESTful APIs. I specialize in developing responsive user interfaces, designing backend APIs, integrating databases, implementing JWT-based authentication, and optimizing application performance. I am passionate about writing clean, maintainable code and building reliable end-to-end software solutions that deliver real business value.",
+      "I am a Software Developer with 1.9+ years of experience building and maintaining web applications and contributing to a SaaS workforce management platform covering attendance, payroll, and multi-level approval workflows. I work with React.js, Node.js, Express.js, MongoDB, Redux Toolkit, and REST APIs, with a focus on authentication, access control, and data-heavy workflows. On the frontend, I build React modules and reusable components, and on the backend I develop REST APIs secured with JWT authentication and role-based access control. I also build server-side pagination, filtering, and data export for large datasets. I enjoy writing clean, maintainable code and building reliable features across both frontend and backend.",
   },
 ];
 
@@ -31,15 +31,15 @@ export const heroProfile = [
 // ==========================
 
 export const aboutHeader =
-  "Software Developer Building Scalable SaaS Products.";
+  "Software Developer Building Reliable SaaS Features.";
 
 export const aboutHeaderParagraph =
-  "I build production-ready enterprise applications using the MERN stack, with expertise in MongoDB, Express.js, React.js, Node.js, RESTful APIs, authentication, workforce management system, attendance management, payroll operations, approval workflows, and administrative dashboard development.";
+  "I build web applications with the MERN stack, with hands-on experience in React.js, Node.js, Express.js, MongoDB, REST APIs, JWT authentication, and role-based access control across attendance, payroll, approval workflows, and administrative dashboards.";
 
 export const aboutParagraphs = [
-  "I am Gaurav Singh, a Software Developer at Vitorscape Technologies, where I contribute to scalable SaaS and enterprise web applications using MongoDB, Express.js, React.js, Node.js, Redux Toolkit, and AWS S3. I graduated with a B.Tech in Internet of Things from Thakur College of Engineering and Technology, Mumbai, with a CGPA of 9.10.",
-  "Currently, I contribute to enterprise workforce management system platforms, delivering features across attendance management, approval workflows, payroll operations, and administrative dashboards. My responsibilities include developing reusable components, building RESTful APIs, implementing secure authentication using JWT and Role-Based Access Control, integrating AWS S3 for file storage, and improving application performance.",
-  "Beyond my professional experience, I have developed full-stack projects including Next Boarding, a travel booking platform featuring real-time seat selection and JWT authentication, and Admin 360, an administrative dashboard featuring role-based access control and Chart.js visualizations. I enjoy developing end-to-end solutions, from backend API development and database design to responsive and user-friendly interfaces.",
+  "I am Gaurav Singh, a Software Developer at Vitorscape Technologies in Mumbai. I joined as a Software Developer Intern in January 2025 and moved into a full-time role in June 2025. I graduated with a B.Tech in Internet of Things from Thakur College of Engineering and Technology, Mumbai, with a CGPA of 9.10.",
+  "At Vitorscape, I contribute to a SaaS workforce management platform covering employee tracking, attendance, payroll, and multi-level approval workflows. My work includes building React.js modules, developing and integrating REST APIs with Node.js, Express.js, and MongoDB, implementing JWT authentication and role-based access control, building server-side pagination, filtering, and data export, and creating reusable components used across many screens.",
+  "Beyond my professional work, I have built full-stack projects including Next Boarding, a travel booking platform with multi-step booking flows, interactive seat maps, and JWT authentication, and Admin 360, an admin dashboard with role-based access control, dark mode, and Chart.js visualizations. I enjoy working end to end, from API development and database design to responsive, user-friendly interfaces.",
 ];
 
 export const coreProfile = [
@@ -62,10 +62,10 @@ export const coreProfile = [
 // ==========================
 
 export const techStackHeader =
-  "Practical tools for building scalable full-stack products";
+  "Practical tools for building reliable full-stack products";
 
 export const techStackHeaderParagraph =
-  "A focused technology stack centered around React.js interfaces, Node.js and Express.js APIs, MongoDB databases, secure authentication, RESTful services, and modern software development practices.";
+  "A focused technology stack centered around React.js interfaces, Node.js and Express.js APIs, MongoDB databases, secure authentication, and REST services.";
 
 export const currentFocus = [
   "Redux Toolkit and RTK Query",
@@ -87,6 +87,7 @@ export const technicalSkills = [
       "CSS3",
       "React.js",
       "React Hooks",
+      "Context API",
       "Redux Toolkit",
       "RTK Query",
       "Next.js",
@@ -94,6 +95,7 @@ export const technicalSkills = [
       "shadcn/ui",
       "Framer Motion",
       "Chart.js",
+      "Responsive Design",
     ],
   },
   {
@@ -101,9 +103,9 @@ export const technicalSkills = [
     technologies: [
       "Node.js",
       "Express.js",
-      "RESTful APIs",
-      "JWT Authentication",
-      "Role-Based Access Control",
+      "REST APIs",
+      "API Integration",
+      "Middleware",
       "Nodemailer",
     ],
   },
@@ -112,18 +114,33 @@ export const technicalSkills = [
     technologies: ["MongoDB", "MySQL"],
   },
   {
-    category: "Cloud and DevOps",
+    category: "Authentication and Security",
+    technologies: [
+      "JWT Authentication",
+      "Role-Based Access Control (RBAC)",
+      "Protected Routes",
+    ],
+  },
+  {
+    category: "Cloud and Deployment",
     technologies: [
       "AWS S3",
       "AWS Lambda",
       "Vercel",
       "Render",
-      "CI/CD Pipelines",
+      "Environment Configuration",
     ],
   },
   {
     category: "Development Tools",
-    technologies: ["Git", "GitHub", "Postman", "Visual Studio Code", "Figma"],
+    technologies: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Visual Studio Code",
+      "Chrome DevTools",
+      "Figma",
+    ],
   },
 ];
 
@@ -140,21 +157,33 @@ export const professionalExperience = [
     employmentPeriod: "June 2025 – Present",
 
     description:
-      "Developed and maintained scalable MERN stack SaaS applications for workforce management system, attendance management, payroll, and approval workflows. Built responsive and reusable user interfaces using React.js and Tailwind CSS. Developed RESTful APIs using Node.js and Express.js and integrated MongoDB for efficient data management. Implemented Redux Toolkit for centralized state management and integrated RESTful services across application modules. Developed features including pagination, filtering, search functionality, and real-time data updates. Integrated AWS S3 for secure file storage and document management. Strengthened application security through JWT authentication and Role-Based Access Control. Improved application performance through lazy loading, memoization, and reusable component architecture. Collaborated with cross-functional teams following Agile development practices.",
+      "Contributed to a SaaS workforce management platform delivered to a client, covering employee tracking, attendance, payroll, and multi-level approval workflows. Built React.js modules for attendance sheets, compliance, inventory and asset management, and company administration, managing state with Redux Toolkit and Context API. Developed and integrated REST APIs with Node.js, Express.js, and MongoDB, with error handling on both client and server. Implemented JWT authentication and role-based access control (RBAC) to secure application features by role. Implemented server-side pagination, filtering, and data export for large datasets, and built reusable components (search hook, shared toolbar, fetch modal) to standardize list screens across modules. Built HR dashboards with Chart.js for attendance and location analytics, plus a polling-based notification system.",
 
     technologies: [
-      "MongoDB",
-      "Express.js",
       "React.js",
-      "Node.js",
       "Redux Toolkit",
-      "JavaScript",
-      "Tailwind CSS",
-      "RESTful APIs",
-      "AWS S3",
+      "Context API",
+      "Chart.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
       "JWT Authentication",
-      "Role-Based Access Control",
+      "Role-Based Access Control (RBAC)",
       "Git",
     ],
+  },
+
+  {
+    position: "Software Developer Intern",
+    company: "Vitorscape Technologies",
+    location: "Mumbai",
+    workMode: "On-site",
+    employmentPeriod: "January 2025 – June 2025",
+
+    description:
+      "Developed frontend features and integrated REST APIs for the workforce management platform. Fixed bugs and shipped application improvements in collaboration with the development team using Git.",
+
+    technologies: ["React.js", "REST APIs", "Git"],
   },
 ];
