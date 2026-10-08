@@ -4,11 +4,11 @@
 
 export const heroStatistics = [
   {
-    value: "1+",
+    value: "1.9",
     label: "Years of Professional Experience",
   },
   {
-    value: "01",
+    value: "1.9",
     label: "SaaS Platform Contributed To",
   },
   {
