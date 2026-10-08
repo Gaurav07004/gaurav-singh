@@ -2,9 +2,13 @@
 @import "tailwindcss";
 
 /* ==========================================================
-   Global styles — reset, base, page shell
+   Global Styles
    Reset, base, page shell and global overrides.
    Uses design tokens from styles/variables.css
+========================================================== */
+
+/* ==========================================================
+   Document
 ========================================================== */
 
 html {
@@ -13,48 +17,89 @@ html {
 
 body {
   min-width: 320px;
+  min-height: 100vh;
   margin: 0;
+
   font-family: var(--font-primary);
   color: var(--secondary);
+
   background:
     radial-gradient(
       circle at 10% 0%,
-      rgba(215, 34, 50, 0.12),
+      color-mix(in srgb, var(--primary-light) 12%, transparent),
       transparent 28rem
     ),
     radial-gradient(
       circle at 95% 12%,
-      rgba(167, 15, 27, 0.08),
+      color-mix(in srgb, var(--primary) 8%, transparent),
       transparent 24rem
     ),
-    linear-gradient(135deg, #fffaf3 0%, #fbefe2 48%, #fff8ef 100%);
+    linear-gradient(
+      135deg,
+      var(--bg-dark) 0%,
+      var(--bg-darker) 48%,
+      var(--bg-dark) 100%
+    );
+
   overflow-x: hidden;
+
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+/* ==========================================================
+   Decorative Grid
+========================================================== */
+
 body::before {
   content: "";
+
   position: fixed;
   inset: 0;
   z-index: -1;
+
   pointer-events: none;
+
   background-image:
-    linear-gradient(rgba(120, 110, 100, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120, 110, 100, 0.12) 1px, transparent 1px);
+    linear-gradient(
+      color-mix(in srgb, var(--secondary) 10%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--secondary) 10%, transparent) 1px,
+      transparent 1px
+    );
+
   background-size: 72px 72px;
+
   mask-image: linear-gradient(to bottom, black, transparent 72%);
+
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 72%);
 }
+
+/* ==========================================================
+   Root
+========================================================== */
 
 #root {
   width: 100%;
   min-height: 100vh;
 }
 
+/* ==========================================================
+   Media
+========================================================== */
+
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
+
+/* ==========================================================
+   Links
+========================================================== */
 
 a {
   color: inherit;
@@ -62,15 +107,28 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* ==========================================================
+   Buttons
+========================================================== */
+
 button {
+  font: inherit;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 
+/* ==========================================================
+   Selection
+========================================================== */
+
 ::selection {
   color: var(--white);
-  background: rgba(167, 15, 27, 0.82);
+  background: color-mix(in srgb, var(--primary) 82%, transparent);
 }
+
+/* ==========================================================
+   Scrollbar
+========================================================== */
 
 body::-webkit-scrollbar {
   width: 10px;
@@ -81,49 +139,69 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: rgba(167, 15, 27, 0.38);
+  background: color-mix(in srgb, var(--primary) 38%, transparent);
+
   border: 3px solid var(--bg-dark);
   border-radius: var(--radius);
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: rgba(167, 15, 27, 0.55);
+  background: color-mix(in srgb, var(--primary) 55%, transparent);
 }
+
+/* ==========================================================
+   Portfolio Shell
+========================================================== */
 
 .portfolio-shell {
   position: relative;
   isolation: isolate;
+
   min-height: 100vh;
+
   background: transparent;
 }
 
 .portfolio-shell::before,
 .portfolio-shell::after {
   content: "";
+
   position: fixed;
   z-index: -1;
+
   width: 28rem;
   height: 28rem;
+
   pointer-events: none;
+
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+
   transform: rotate(18deg);
 }
 
 .portfolio-shell::before {
   top: 6rem;
   left: -18rem;
-  background: rgba(255, 252, 247, 0.42);
+
+  background: color-mix(in srgb, var(--surface) 42%, transparent);
 }
 
 .portfolio-shell::after {
   right: -19rem;
   bottom: 4rem;
-  background: rgba(167, 15, 27, 0.05);
+
+  background: color-mix(in srgb, var(--primary) 5%, transparent);
 }
+
+/* ==========================================================
+   Main Section Container
+========================================================== */
 
 .portfolio-shell > main,
 .portfolio-shell > section {
-  width: min(var(--container-max), calc(100% - var(--container-gutter)));
+  width: min(var(--container-max), calc(100% - (var(--container-gutter) * 2)));
+
   margin-inline: auto;
   padding-block: 4rem;
 }
@@ -133,41 +211,19 @@ body::-webkit-scrollbar-thumb:hover {
   padding-bottom: 4rem;
 }
 
+/* ==========================================================
+   Anchor Offset
+========================================================== */
+
 section[id] {
   scroll-margin-top: var(--anchor-offset);
 }
 
-img.rounded {
-  border-radius: var(--radius) !important;
-}
+/* ==========================================================
+   Global Radius Override
+========================================================== */
 
-a[class*="border-(--primary)"],
-button[class*="border-(--primary)"] {
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
-  transition:
-    background 240ms ease,
-    color 240ms ease,
-    border-color 240ms ease,
-    box-shadow 240ms ease;
-}
-
-a[class*="border-(--primary)"]:hover,
-button[class*="border-(--primary)"]:hover {
-  background: linear-gradient(
-    135deg,
-    var(--primary),
-    var(--primary-light)
-  ) !important;
-  color: var(--white) !important;
-  box-shadow: 0 14px 30px rgba(167, 15, 27, 0.22);
-}
-
-section p {
-  text-align: justify;
-}
-
+img.rounded,
 .rounded,
 .rounded-md,
 .rounded-lg,
@@ -178,13 +234,13 @@ section p {
   border-radius: var(--radius) !important;
 }
 
+/* ==========================================================
+   Shared Surface Overrides
+========================================================== */
+
 .bg-\(--card\),
 .bg-\(--chip\) {
-  background: linear-gradient(
-    145deg,
-    rgba(255, 252, 247, 0.96),
-    rgba(249, 239, 227, 0.92)
-  ) !important;
+  background: var(--gradient-card) !important;
   box-shadow: var(--shadow-sm);
 }
 
@@ -195,4 +251,83 @@ section p {
 
 .border-\(--border\) {
   border-color: var(--border) !important;
+}
+
+/* ==========================================================
+   Primary Border Controls
+   Used by legacy / utility-based buttons and links.
+========================================================== */
+
+a[class*="border-(--primary)"],
+button[class*="border-(--primary)"] {
+  border-radius: var(--radius);
+
+  background: var(--surface);
+
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--white) 75%, transparent);
+
+  transition: var(--transition-interactive);
+}
+
+a[class*="border-(--primary)"]:hover,
+button[class*="border-(--primary)"]:hover {
+  background: var(--gradient-primary) !important;
+  border-color: var(--primary-light) !important;
+  color: var(--white) !important;
+  box-shadow: var(--shadow-primary);
+}
+
+/* ==========================================================
+   Responsive Shell
+========================================================== */
+
+@media (max-width: 1100px) {
+  .portfolio-shell > main,
+  .portfolio-shell > section {
+    width: min(100%, calc(100% - 3rem));
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-shell > main,
+  .portfolio-shell > section {
+    width: min(100%, calc(100% - 2rem));
+
+    padding-block: 3rem;
+  }
+
+  .portfolio-shell > main:first-of-type {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-shell > main,
+  .portfolio-shell > section {
+    width: min(100%, calc(100% - 1.5rem));
+
+    padding-block: 2.5rem;
+  }
+
+  .portfolio-shell > main:first-of-type {
+    padding-top: 6rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* ==========================================================
+   Reduced Motion
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
 }

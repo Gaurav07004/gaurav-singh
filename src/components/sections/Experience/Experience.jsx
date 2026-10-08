@@ -1,3 +1,4 @@
+import { SlLocationPin } from "react-icons/sl";
 import { SECTIONS } from "../../../data/sections";
 import { professionalExperience } from "../../../data/experience";
 import { getCompanyPeriod, groupByCompany } from "../../../utils/experience";
@@ -18,27 +19,32 @@ export default function Experience() {
       <div className="experience-list">
         {groupedExperience.map((group) => (
           <Card key={group.company} hover className="experience-card">
-            <div className="experience-top">
-              <span className="experience-duration">
-                {getCompanyPeriod(group.roles)}
-              </span>
-            </div>
+            <header className="experience-header">
+              <div className="experience-company-info">
+                <h2 className="experience-company">{group.company}</h2>
 
-            <div className="experience-content">
-              <div className="experience-company">
-                <span>{group.company}</span>
-
-                <div className="experience-location">
-                  <span className="text-base text-(--primary)">
-                    {group.workMode} • {group.location}
+                <div className="experience-meta">
+                  <span className="experience-location">
+                    <SlLocationPin />
+                    {group.location}
+                  </span>
+                  <span className="experience-work-mode">
+                    ({group.workMode})
                   </span>
                 </div>
               </div>
 
+              <span className="experience-duration">
+                {getCompanyPeriod(group.roles)}
+              </span>
+            </header>
+
+            <div className="experience-roles">
               {group.roles.map((role) => (
-                <div key={role.position} className="experience-role">
+                <article key={role.position} className="experience-role">
                   <div className="experience-role-head">
                     <h3>{role.position}</h3>
+
                     <span className="experience-role-period">
                       {role.employmentPeriod}
                     </span>
@@ -47,7 +53,7 @@ export default function Experience() {
                   <p className="experience-summary">{role.description}</p>
 
                   <TagList items={role.technologies} size="md" />
-                </div>
+                </article>
               ))}
             </div>
           </Card>

@@ -14,7 +14,7 @@ import "./Button.css";
 export default function Button({
   href,
   variant = "primary",
-  size = "lg",
+  size = "md",
   arrow = false,
   newTab = false,
   className,

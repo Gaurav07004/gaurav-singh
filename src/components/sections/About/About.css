@@ -1,28 +1,40 @@
 /* ==========================================================
-   About section — story card + profile cards
+   About Section
+   Story card + profile cards
    Uses design tokens from styles/variables.css
 ========================================================== */
 
 .about-section {
   position: relative;
+  min-width: 0;
 }
 
-.about-story-label {
-  color: var(--primary);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
+/* ==========================================================
+   Layout
+========================================================== */
 
 .about-layout {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
   margin-top: 2rem;
+  min-width: 0;
 }
 
+@media (min-width: 1280px) {
+  .about-layout {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+}
+
+/* ==========================================================
+   Story Card
+========================================================== */
+
 .about-story {
-  padding: clamp(1.2rem, 3vw, 1.5rem);
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
 }
 
 .about-story-label {
@@ -30,8 +42,19 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+
+  max-width: 100%;
   padding-bottom: 1rem;
+
   border-bottom: 1px solid var(--border);
+
+  color: var(--primary);
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
 }
 
 .about-paragraphs {
@@ -41,52 +64,91 @@
 }
 
 .about-paragraphs p {
+  margin: 0;
   color: var(--secondary-light);
-  font-size: 0.95rem;
-  line-height: 1.85;
+  font-family: var(--font-primary);
+  font-size: var(--body-base);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-loose);
   text-align: justify;
+  overflow-wrap: anywhere;
 }
+
+/* ==========================================================
+   Profile Cards
+========================================================== */
 
 .about-profile-grid {
   display: grid;
   gap: 1rem;
+  min-width: 0;
 }
 
 .about-profile-card {
+  min-width: 0;
   padding: 1.25rem;
 }
 
 .about-profile-card p {
-  color: var(--secondary-light);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  margin: 0;
+  color: var(--primary);
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .about-profile-card h3 {
-  margin-top: 0.75rem;
-  color: var(--primary);
-  font-size: 0.99rem;
-  font-weight: 800;
-  line-height: 1.35;
+  margin: 0.65rem 0 0;
+  color: var(--secondary);
+  font-family: var(--font-primary);
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  overflow-wrap: anywhere;
 }
 
-@media (min-width: 1280px) {
-  .about-layout {
-    grid-template-columns: 2fr 1fr;
-  }
+/* Subtle accent for profile cards */
+.about-profile-card::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2px;
+  margin-top: 1rem;
+  background: var(--gradient-primary);
+  border-radius: var(--radius);
 }
+
+/* ==========================================================
+   Tablet
+========================================================== */
 
 @media (max-width: 1100px) {
   .about-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
+/* ==========================================================
+   Mobile
+========================================================== */
+
 @media (max-width: 768px) {
   .about-layout {
-    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-paragraphs {
+    gap: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  .about-profile-grid {
+    gap: 0.85rem;
   }
 }
 
@@ -95,33 +157,52 @@
   .about-profile-card {
     padding: 1rem;
   }
-}
 
-/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
+  .about-story-label {
+    gap: 0.75rem;
+    padding-bottom: 0.85rem;
+  }
 
-.about-layout > *,
-.about-profile-grid > * {
-  min-width: 0;
-}
+  .about-paragraphs p {
+    font-size: var(--body-sm);
+    line-height: var(--leading-relaxed);
+  }
 
-@media (min-width: 1280px) {
-  .about-layout {
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  .about-profile-card h3 {
+    font-size: var(--text-base);
   }
 }
 
-.about-paragraphs p,
-.about-profile-card h3 {
-  overflow-wrap: anywhere;
-}
+/* ==========================================================
+   Small Devices
+========================================================== */
 
 @media (max-width: 360px) {
   .about-story-label {
     flex-wrap: wrap;
     gap: 0.5rem;
+    letter-spacing: var(--tracking-wide);
   }
 
   .about-profile-card p {
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* ==========================================================
+   Safety
+========================================================== */
+
+.about-layout > *,
+.about-profile-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-section *,
+  .about-section *::before,
+  .about-section *::after {
+    scroll-behavior: auto;
   }
 }

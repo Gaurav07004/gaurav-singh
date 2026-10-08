@@ -1,76 +1,159 @@
-/* Shared technology / skill pills — sizes: --sm --md --lg | --accent */
+/* ==========================================================
+   Shared Technology / Skill Tags
+   Sizes: --sm | --md | --lg
+   Variant: --accent
+========================================================== */
 
 .tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem;
-  align-content: start;
+  align-content: flex-start;
+  gap: 0.55rem;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   height: fit-content;
 }
 
 .tag {
-  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  min-width: 0;
+
+  padding: 0.4rem 0.7rem;
+
   border: 1px solid var(--border);
   border-radius: var(--radius);
+
   background: var(--surface);
   color: var(--secondary);
-  font-size: 0.8rem;
-  font-weight: 700;
+
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-normal);
+  letter-spacing: 0.01em;
+
+  white-space: nowrap;
+  overflow-wrap: anywhere;
+
   transition: var(--transition-interactive);
 }
 
-/* Sizes */
+/* ==========================================================
+   Small
+========================================================== */
+
 .tag-list--sm {
-  gap: 0.3rem;
+  gap: 0.35rem;
 }
 
 .tag-list--sm .tag {
-  padding: 4px 8px;
-  font-size: 0.75rem;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.7rem;
 }
 
+/* ==========================================================
+   Medium
+========================================================== */
+
 .tag-list--md {
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .tag-list--md .tag {
-  font-size: 0.75rem;
+  padding: 0.38rem 0.65rem;
+  font-size: 0.8rem;
 }
 
-/* Accent (red outline) */
+/* ==========================================================
+   Large
+========================================================== */
+
+.tag-list--lg {
+  gap: 0.55rem;
+}
+
+.tag-list--lg .tag {
+  padding: 0.5rem 0.8rem;
+  font-size: var(--body-sm);
+}
+
+/* ==========================================================
+   Accent Variant
+========================================================== */
+
 .tag-list--accent .tag {
-  padding: 0.55rem 0.72rem;
   border-color: var(--border-strong);
+  background: color-mix(in srgb, var(--primary) 4%, var(--surface));
   color: var(--primary);
 }
+
+/* ==========================================================
+   Hover
+========================================================== */
 
 .tag-list .tag:hover {
   background: var(--primary);
   border-color: var(--primary);
   color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
+/* ==========================================================
+   Responsive
+========================================================== */
+
 @media (max-width: 480px) {
-  .tag-list .tag {
-    padding: 0.45rem 0.6rem;
-    font-size: 0.72rem;
+  .tag-list {
+    gap: 0.4rem;
+  }
+
+  .tag {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.7rem;
+  }
+
+  .tag-list--sm .tag {
+    padding: 0.28rem 0.5rem;
+    font-size: 0.67rem;
+  }
+
+  .tag-list--lg .tag {
+    padding: 0.42rem 0.65rem;
+    font-size: var(--text-xs);
   }
 }
+
+/* ==========================================================
+   Small Mobile
+========================================================== */
+
+@media (max-width: 360px) {
+  .tag-list {
+    gap: 0.3rem;
+  }
+
+  .tag {
+    font-size: 0.68rem;
+  }
+}
+
+/* ==========================================================
+   Reduced Motion
+========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .tag {
     transition: none !important;
   }
-}
 
-/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
-
-.tag-list {
-  min-width: 0;
-  max-width: 100%;
-}
-
-.tag {
-  max-width: 100%;
-  overflow-wrap: anywhere;
+  .tag-list .tag:hover {
+    transform: none;
+  }
 }

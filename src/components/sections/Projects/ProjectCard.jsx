@@ -21,7 +21,7 @@ export default function ProjectCard({ project }) {
 
         <p className="project-description">{project.description}</p>
 
-        <TagList items={project.techAndTechnique} size="sm" />
+        <TagList items={project.techAndTechnique} size="md" />
 
         <Button
           href={`/projects/${project.id}`}

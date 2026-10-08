@@ -1,70 +1,24 @@
 /* ==========================================================
-   Projects section — project cards grid
+   Projects Section
+   Project cards grid
    Uses design tokens from styles/variables.css
 ========================================================== */
 
 .projects-section {
   position: relative;
+  min-width: 0;
 }
+
+/* ==========================================================
+   Projects Grid
+========================================================== */
 
 .projects-grid {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
   margin-top: 2rem;
-}
-
-.project-card {
-  overflow: hidden;
-}
-
-.project-content {
-  display: grid;
-  gap: 1.2rem;
-  padding: 1.4rem;
-}
-
-.project-card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.project-title {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.project-type {
-  margin-bottom: 0.45rem;
-  color: var(--primary);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.project-title h3 {
-  color: var(--secondary);
-  font-size: clamp(1.2rem, 1.5vw, 1.65rem);
-  font-weight: 800;
-  line-height: 1.35;
-}
-
-.project-year {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--primary);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.project-description {
-  color: var(--secondary-light);
-  font-size: 0.95rem;
-  line-height: 1.85;
+  min-width: 0;
 }
 
 @media (min-width: 1280px) {
@@ -73,24 +27,183 @@
   }
 }
 
+/* ==========================================================
+   Project Card
+========================================================== */
+
+.project-card {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ==========================================================
+   Project Content
+========================================================== */
+
+.project-content {
+  display: grid;
+  gap: 1.15rem;
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+/* ==========================================================
+   Project Header
+========================================================== */
+
+.project-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.project-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.project-title > div {
+  min-width: 0;
+}
+
+/* ==========================================================
+   Project Type
+========================================================== */
+
+.project-type {
+  margin: 0 0 0.45rem;
+
+  color: var(--primary);
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   Project Title
+========================================================== */
+
+.project-title h3 {
+  margin: 0;
+
+  color: var(--secondary);
+  font-family: var(--font-primary);
+  font-size: clamp(1.2rem, 1.5vw, 1.65rem);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   Project Year
+========================================================== */
+
+.project-year {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: none;
+
+  color: var(--primary);
+  font-family: var(--font-primary);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wide);
+
+  white-space: nowrap;
+}
+
+.project-year svg {
+  flex: none;
+}
+
+/* ==========================================================
+   Project Description
+========================================================== */
+
+.project-description {
+  /* max-width: 68ch; */
+  margin: 0;
+
+  color: var(--secondary-light);
+  font-family: var(--font-primary);
+  font-size: var(--body-base);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-loose);
+  text-align: justify;
+
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   Project Button
+========================================================== */
+
+.project-button {
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================
+   Media Safety
+========================================================== */
+
+.project-card img,
+.project-card svg {
+  max-width: 100%;
+}
+
+.project-title img,
+.project-title svg {
+  flex: none;
+}
+
+/* ==========================================================
+   Tablet
+========================================================== */
+
 @media (max-width: 1100px) {
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
 
   .project-card-top {
     flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .project-button {
+    width: 100%;
   }
 }
 
+/* ==========================================================
+   Mobile
+========================================================== */
+
 @media (max-width: 480px) {
   .project-content {
+    gap: 1rem;
     padding: 1rem;
   }
 
@@ -101,38 +214,50 @@
   .project-title h3 {
     font-size: 1.1rem;
   }
-}
 
-/* "View Details" button inside a project card */
-.project-button {
-  margin-top: 0.5rem;
-}
+  .project-description {
+    font-size: var(--body-sm);
+    line-height: var(--leading-relaxed);
+  }
 
-@media (max-width: 768px) {
-  .project-button {
-    width: 100%;
+  .project-year {
+    font-size: 0.7rem;
   }
 }
 
-/* ---------- Safety fixes only (no visual change at normal widths) ---------- */
+/* ==========================================================
+   Small Devices
+========================================================== */
+
+@media (max-width: 360px) {
+  .project-type {
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .project-title h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ==========================================================
+   Long-content Safety
+========================================================== */
 
 .projects-grid > *,
 .project-content > *,
 .project-card-top > *,
 .project-title > div {
   min-width: 0;
-}
-
-.project-title img,
-.project-title svg {
-  flex: none;
-}
-
-.project-title h3,
-.project-description {
-  overflow-wrap: anywhere;
-}
-
-.project-card img {
   max-width: 100%;
+}
+
+/* ==========================================================
+   Reduced Motion
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card * {
+    scroll-behavior: auto;
+  }
 }
